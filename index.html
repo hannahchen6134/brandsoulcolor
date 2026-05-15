@@ -4,20 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<!-- ── SEO ── -->
-<title>品牌配色測驗｜找到適合你的品牌色與 IG 版面配色</title>
-<meta name="description" content="用 105 色票系統，幫你判斷品牌色是否適合你的氣質、服務與 IG 版面。找出主色、搭配色、亮點色與記憶色，讓品牌不只漂亮，也更容易被記住。">
-<meta name="keywords" content="品牌配色,品牌色彩測驗,品牌配色測驗,IG 版面配色,個人品牌配色,品牌色彩診斷">
-<meta name="author" content="Hannah Chen">
+<!-- ══════════════════════════
+     SEO（品牌美感整理師定位版）
+     TODO：上線前請把所有 your-domain.com 換成正式網址
+══════════════════════════ -->
+<title>品牌美感整理師｜IG 版面整理、品牌配色與互動網站</title>
+<meta name="description" content="協助創作者與小品牌整理 IG 版面、品牌配色與互動式網站。透過 105 色票系統與品牌美感整理，建立更清楚、更有辨識度、更容易被記住的個人品牌視覺。">
+<meta name="keywords" content="品牌美感整理,IG 版面整理,品牌配色,品牌色彩測驗,互動網站,個人品牌">
+<meta name="author" content="青青 Hannah Chen">
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="https://your-domain.com/index-v3.html">
+<!-- TODO：換成正式網址 -->
+<link rel="canonical" href="https://your-domain.com/index-organizer.html">
 
 <!-- ── Open Graph ── -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="品牌配色測驗｜找到適合你的品牌色與 IG 版面配色">
-<meta property="og:description" content="用 105 色票系統，幫你判斷品牌色是否適合你的氣質、服務與 IG 版面。找出主色、搭配色、亮點色與記憶色。">
-<meta property="og:url" content="https://your-domain.com/index-v3.html">
-<meta property="og:image" content="https://your-domain.com/brand-color-quiz-cover.jpg">
+<meta property="og:title" content="品牌美感整理師｜IG 版面整理、品牌配色與互動網站">
+<meta property="og:description" content="協助創作者與小品牌整理 IG 版面、品牌配色與互動式網站。透過 105 色票系統與品牌美感整理，建立更清楚、更有辨識度、更容易被記住的個人品牌視覺。">
+<!-- TODO：換成正式網址 -->
+<meta property="og:url" content="https://your-domain.com/index-organizer.html">
+<!-- TODO：換成正式 OG 圖片 -->
+<meta property="og:image" content="https://your-domain.com/brand-organizer-cover.jpg">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -26,10 +32,10 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "品牌配色測驗",
-  "url": "https://your-domain.com/index-v3.html",
-  "description": "用 105 色票系統，幫你判斷品牌色是否適合你的氣質、服務與 IG 版面。",
-  "author": { "@type": "Person", "name": "Hannah Chen" }
+  "name": "品牌美感整理師｜青青",
+  "url": "https://your-domain.com/index-organizer.html",
+  "description": "協助創作者與小品牌整理 IG 版面、品牌配色與互動式網站。",
+  "author": { "@type": "Person", "name": "青青 Hannah Chen" }
 }
 </script>
 
@@ -120,28 +126,96 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   position:relative;z-index:1;
   display:flex;flex-direction:column;align-items:center;
   text-align:center;
-  padding:100px 32px 80px;
+  /* 上 padding 縮小，讓 eyebrow + 標題 + cascade 從頁面頂端開始
+     右上角的 nav 按鈕組（About + 漢堡）不會擋住文字 */
+  padding: calc(64px + env(safe-area-inset-top)) 32px 80px;
   max-width:500px;width:100%;
 }
 .intro-eye{
   font-family:'EB Garamond',serif;font-size:.76rem;letter-spacing:.55em;
   color:rgba(184,144,74,.65);text-transform:uppercase;
   margin-bottom:32px;
-  animation:up .9s .1s both;
+  animation:up .9s .3s both;
 }
 .intro-title{
   font-size:clamp(1.3rem,5.2vw,2rem);font-weight:400;
   letter-spacing:.03em;line-height:1.4;color:#5C3D1E;
-  margin-bottom:10px;
-  animation:up .9s .2s both;
+  margin-bottom:20px;
+  animation:up .9s .7s both;
 }
 .intro-sub{
   font-size:clamp(.88rem,3.6vw,1.15rem);font-weight:400;
-  letter-spacing:.12em;line-height:1.6;
+  letter-spacing:.12em;line-height:1.85;
   color:rgba(184,144,74,.92);
-  margin-bottom:12px;
-  animation:up .9s .25s both;
+  margin-bottom:32px;
+  animation:up .9s 1.95s both;
 }
+/* ═══ 首頁三主題 chips：讓訪客馬上看到我會的三件事 ═══ */
+.intro-themes{
+  display:flex; flex-wrap:wrap; justify-content:center;
+  gap:8px;
+  margin: 4px 0 22px;
+  width: 100%;
+}
+.intro-theme{
+  display:inline-flex; align-items:center; gap:9px;
+  padding: 9px 16px 9px 18px;
+  min-height: 42px;
+  background: linear-gradient(135deg, rgba(255,253,248,.85), rgba(252,247,236,.7));
+  border: 1px solid rgba(184,144,74,.4);
+  border-radius: 60px;
+  cursor: pointer;
+  font-family: 'Noto Serif TC', serif;
+  box-shadow: 0 3px 10px rgba(184,144,74,.12), inset 0 1px 0 rgba(255,255,255,.6);
+  transition: background .28s ease, border-color .28s ease, transform .15s ease, box-shadow .28s ease;
+  opacity: 0;
+}
+.intro-theme .theme-arrow{
+  font-family: 'EB Garamond', serif;
+  font-size: .9rem; font-weight: 400;
+  color: rgba(184,144,74,.78);
+  margin-left: 2px;
+  transition: transform .25s ease, color .25s ease;
+}
+.intro-theme:nth-of-type(1){ animation: chipReveal 1s 2.15s cubic-bezier(.34,1.42,.64,1) both, chipGlow 4s 3.4s ease-in-out infinite; }
+.intro-theme:nth-of-type(2){ animation: chipReveal 1s 2.30s cubic-bezier(.34,1.42,.64,1) both, chipGlow 4s 3.7s ease-in-out infinite; }
+.intro-theme:nth-of-type(3){ animation: chipReveal 1s 2.45s cubic-bezier(.34,1.42,.64,1) both, chipGlow 4s 4.0s ease-in-out infinite; }
+/* chip 進場：淡入 + 上移 + 輕微 overshoot scale，比純 fade-up 更有「綻放」感 */
+@keyframes chipReveal{
+  0%   { opacity:0; transform: translateY(18px) scale(.92); filter: blur(3px); }
+  55%  { opacity:1; transform: translateY(-2px) scale(1.04); filter: blur(0); }
+  80%  { opacity:1; transform: translateY(1px) scale(.99); }
+  100% { opacity:1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+/* chip 浮現完後的環境呼吸光（金暈微微一閃一閃，提示可點） */
+@keyframes chipGlow{
+  0%, 100% { box-shadow: 0 3px 10px rgba(184,144,74,.12), inset 0 1px 0 rgba(255,255,255,.6); }
+  50%      { box-shadow: 0 6px 18px rgba(184,144,74,.28), inset 0 1px 0 rgba(255,255,255,.7); }
+}
+.intro-theme .theme-num{
+  font-family: 'EB Garamond', serif;
+  font-size: .72rem; letter-spacing: .18em;
+  color: rgba(184,144,74,.72);
+}
+.intro-theme .theme-name{
+  font-size: .82rem; font-weight: 400;
+  letter-spacing: .08em; color: #5C3D1E;
+}
+@media(hover:hover){
+  .intro-theme:hover{
+    background: linear-gradient(135deg, rgba(255,250,240,.95), rgba(250,240,220,.85));
+    border-color: rgba(184,144,74,.68);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(184,144,74,.22), inset 0 1px 0 rgba(255,255,255,.7);
+  }
+  .intro-theme:hover .theme-name{ color: #3A2A14; }
+  .intro-theme:hover .theme-num{ color: #8E6A2E; }
+  .intro-theme:hover .theme-arrow{
+    transform: translateX(4px);
+    color: #8E6A2E;
+  }
+}
+.intro-theme:active{ transform: scale(.97); }
 .intro-line{
   width:90px;height:8px;margin:18px auto 22px;
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 8'%3E%3Cline x1='4' y1='4' x2='33' y2='4' stroke='%23B8904A' stroke-width='.7' stroke-linecap='round'/%3E%3Cpath d='M40 1.5 L42.5 4 L40 6.5 L37.5 4 Z' fill='none' stroke='%23B8904A' stroke-width='.7' stroke-linejoin='round'/%3E%3Cline x1='47' y1='4' x2='76' y2='4' stroke='%23B8904A' stroke-width='.7' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center/contain;
@@ -152,7 +226,7 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
 .intro-palette{
   display:flex;gap:7px;justify-content:center;align-items:flex-end;
   margin-bottom:28px;
-  animation:up .9s .38s both;
+  animation:up .9s 1.6s both;
 }
 .ip-sw{
   border-radius:60px;
@@ -450,7 +524,7 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   border-left:2px solid rgba(184,144,74,.38);
   padding:4px 0 4px 16px;text-align:left;
   margin-bottom:40px;
-  animation:up .9s .46s both;
+  animation:up .9s 2.0s both;
 }
 .intro-cta{
   font-family:'Noto Serif TC',serif;font-size:.88rem;letter-spacing:.22em;
@@ -460,20 +534,108 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   padding:14px 48px;border-radius:60px;cursor:pointer;
   box-shadow:0 8px 26px rgba(42,28,14,.24),0 2px 6px rgba(42,28,14,.14),inset 0 1px 0 rgba(255,255,255,.18);
   transition:all .35s ease;
-  animation:up .9s .56s both;
+  animation: ctaReveal 1.1s 2.95s cubic-bezier(.34,1.42,.64,1) both,
+             ctaGlow 4.5s 4.5s ease-in-out infinite;
+}
+/* 主 CTA 進場：放大彈入＋金光內爆 */
+@keyframes ctaReveal{
+  0%   { opacity:0; transform: translateY(20px) scale(.88); filter: blur(4px); box-shadow: 0 0 0 0 rgba(184,144,74,0); }
+  50%  { opacity:1; transform: translateY(-3px) scale(1.06); filter: blur(0); box-shadow: 0 12px 36px rgba(42,28,14,.32), 0 0 36px rgba(232,200,140,.45), inset 0 1px 0 rgba(255,255,255,.22); }
+  75%  { transform: translateY(0) scale(.985); }
+  100% { opacity:1; transform: translateY(0) scale(1); filter: blur(0); box-shadow: 0 8px 26px rgba(42,28,14,.24), 0 2px 6px rgba(42,28,14,.14), inset 0 1px 0 rgba(255,255,255,.18); }
+}
+/* 主 CTA 浮現完後的呼吸光（金暈緩慢一漲一收，引導點擊） */
+@keyframes ctaGlow{
+  0%, 100% { box-shadow: 0 8px 26px rgba(42,28,14,.24), 0 2px 6px rgba(42,28,14,.14), 0 0 0 rgba(232,200,140,0), inset 0 1px 0 rgba(255,255,255,.18); }
+  50%      { box-shadow: 0 10px 30px rgba(42,28,14,.28), 0 2px 8px rgba(42,28,14,.16), 0 0 28px rgba(232,200,140,.32), inset 0 1px 0 rgba(255,255,255,.22); }
 }
 @media(hover:hover){.intro-cta:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(42,28,14,.32),0 3px 8px rgba(42,28,14,.16),inset 0 1px 0 rgba(255,255,255,.2);}}
 .intro-flow-hint{
   font-size:.82rem;letter-spacing:.08em;line-height:1.9;
   color:rgba(106,80,40,.62);text-align:center;
   margin-bottom:18px;font-weight:400;
-  animation:up .9s .5s both;
+  animation:up .9s 2.65s both;
 }
 .intro-flow-hint span{color:rgba(184,144,74,.85);}
+/* 主 CTA 下方的次要按鈕：看服務（金邊膠囊，比主 CTA 輕，比 ghost link 重） */
+.intro-secondary-link{
+  display:inline-flex;align-items:center;justify-content:center;
+  margin-top:14px;min-height:44px;
+  font-family:'Noto Serif TC',serif;font-size:.82rem;
+  letter-spacing:.16em;color:rgba(106,80,40,.85);
+  background:rgba(255,253,248,.4);
+  border:1px solid rgba(184,144,74,.42);
+  border-radius:60px;cursor:pointer;
+  padding:11px 28px;
+  transition:color .28s ease, background .28s ease, border-color .28s ease, box-shadow .28s ease, transform .15s ease;
+  animation:up .9s 3.1s both;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.5);
+}
+@media(hover:hover){
+  .intro-secondary-link:hover{
+    color:#5C3D1E;
+    background:rgba(255,250,240,.7);
+    border-color:rgba(184,144,74,.65);
+    box-shadow:0 4px 14px rgba(184,144,74,.15), inset 0 1px 0 rgba(255,255,255,.6);
+    transform:translateY(-1px);
+  }
+}
+.intro-secondary-link:active{transform:scale(.97);}
+/* 開始測驗 下方的次要動作：認識青青（ghost link 風格，不跟主 CTA 搶權重） */
+.intro-about-link{
+  display:inline-flex;align-items:center;justify-content:center;
+  margin-top:18px;min-height:38px;
+  font-family:'EB Garamond',serif;font-size:.8rem;
+  letter-spacing:.08em;color:rgba(106,80,40,.6);
+  background:none;border:none;cursor:pointer;
+  padding:6px 14px 8px;
+  position:relative;
+  transition:color .25s ease;
+  animation:up .9s 3.1s both;
+}
+.intro-about-link .ab-zh{
+  font-family:'Noto Serif TC',serif;
+  margin-left:.4em;letter-spacing:.04em;
+}
+.intro-about-link::after{
+  content:'';position:absolute;left:14px;right:14px;bottom:4px;
+  height:1px;background:rgba(184,144,74,.32);
+  transform:scaleX(.6);transform-origin:center;
+  transition:transform .3s ease, background .25s ease;
+}
+@media(hover:hover){
+  .intro-about-link:hover{color:rgba(184,144,74,.95);}
+  .intro-about-link:hover::after{transform:scaleX(1);background:rgba(184,144,74,.6);}
+}
+.intro-about-link:active{transform:scale(.97);}
+/* 首頁 nav 條變透明——漢堡按鈕＋About 青青 一組漂浮右上角
+   標題、動畫、cascade 全部從頁面頂端開始，nav 不造成視覺斷層 */
+body:has(#pg-intro.active) .nav{
+  background: transparent;
+  border-bottom: none;
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+/* 首頁不需要 CTA 下方的 ghost About link（漢堡選單裡已經有 About 青青） */
+body:has(#pg-intro.active) .intro-about-link{ display: none; }
+/* 首頁也不需要 nav 的 About pill——漢堡選單已收進去，避免兩種按鈕語言互相打架 */
+body:has(#pg-intro.active) .nav-about{ display: none; }
+
+/* 首頁漢堡按鈕從頂端下落彈入（單獨一顆，乾淨） */
+body:has(#pg-intro.active) .nav-menu-btn{
+  margin-left: auto;
+  animation: navBtnIn .9s .2s cubic-bezier(.34,1.42,.64,1) both;
+}
+@keyframes navBtnIn{
+  0%   { opacity:0; transform: translateY(-8px) scale(.85); filter: blur(3px); }
+  60%  { opacity:1; transform: translateY(0) scale(1.05); filter: blur(0); }
+  100% { opacity:1; transform: translateY(0) scale(1); }
+}
 .intro-price{
   margin-top:28px;font-size:.65rem;letter-spacing:.18em;
   color:rgba(184,144,74,.65);
-  animation:up .9s .64s both;
+  animation:up .9s 3.0s both;
 }
 .intro-spots-badge{
   display:inline-flex;align-items:center;gap:6px;
@@ -514,18 +676,18 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   font-family:'EB Garamond',serif;font-size:.68rem;font-weight:500;letter-spacing:.48em;
   color:#3A2A14;text-transform:uppercase;
   margin-bottom:clamp(18px,3vw,24px);
-  opacity:0;animation:transUp .8s .1s both;
+  opacity:0;animation:transUp .8s .15s both;
 }
 .trans-title{
   font-family:'Noto Serif TC',serif;font-size:clamp(1.3rem,5vw,1.8rem);font-weight:400;
   letter-spacing:.08em;line-height:1.7;color:#3A2A14;
   margin-bottom:clamp(12px,2vw,18px);
-  opacity:0;animation:transUp .8s .2s both;
+  opacity:0;animation:transUp .8s .4s both;
 }
 .trans-subtitle{
   font-size:.82rem;font-weight:300;letter-spacing:.06em;
   color:rgba(106,80,40,.55);line-height:1.8;
-  opacity:0;animation:transUp .8s .3s both;
+  opacity:0;animation:transUp .8s .7s both;
 }
 .trans-cards{
   display:flex;
@@ -533,6 +695,7 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   gap:clamp(8px,2vw,12px);
   width:100%;
   margin-bottom:clamp(36px,6vw,48px);
+  position:relative;
 }
 .trans-card{
   display:grid;
@@ -576,28 +739,31 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   opacity:0;
 }
 .trans-card:nth-child(1)::before{
-  background:radial-gradient(circle,rgba(228,140,90,.42) 0%,rgba(240,180,140,.15) 45%,transparent 72%);
-  animation:transGlowReveal 2.5s .7s cubic-bezier(.25,.46,.45,.94) forwards;
+  background:radial-gradient(circle,rgba(228,140,90,.55) 0%,rgba(240,180,140,.18) 45%,transparent 72%);
+  animation:cardFlash 2.8s 1.40s cubic-bezier(.22,.61,.36,1) forwards;
 }
 .trans-card:nth-child(2)::before{
-  background:radial-gradient(circle,rgba(120,150,200,.42) 0%,rgba(170,200,225,.15) 45%,transparent 72%);
-  animation:transGlowReveal 2.5s 1.3s cubic-bezier(.25,.46,.45,.94) forwards;
+  background:radial-gradient(circle,rgba(120,150,200,.55) 0%,rgba(170,200,225,.18) 45%,transparent 72%);
+  animation:cardFlash 2.8s 1.80s cubic-bezier(.22,.61,.36,1) forwards;
 }
 .trans-card:nth-child(3)::before{
-  background:radial-gradient(circle,rgba(220,180,90,.42) 0%,rgba(235,210,150,.15) 45%,transparent 72%);
-  animation:transGlowReveal 2.5s 1.9s cubic-bezier(.25,.46,.45,.94) forwards;
+  background:radial-gradient(circle,rgba(220,180,90,.55) 0%,rgba(235,210,150,.18) 45%,transparent 72%);
+  animation:cardFlash 2.8s 2.20s cubic-bezier(.22,.61,.36,1) forwards;
 }
 .trans-card:nth-child(4)::before{
-  background:radial-gradient(circle,rgba(160,130,180,.42) 0%,rgba(195,170,210,.15) 45%,transparent 72%);
-  animation:transGlowReveal 2.5s 2.5s cubic-bezier(.25,.46,.45,.94) forwards;
+  background:radial-gradient(circle,rgba(160,130,180,.55) 0%,rgba(195,170,210,.18) 45%,transparent 72%);
+  animation:cardFlash 2.8s 2.60s cubic-bezier(.22,.61,.36,1) forwards;
 }
 .trans-card:nth-child(5)::before{
-  background:radial-gradient(circle,rgba(120,180,160,.42) 0%,rgba(170,210,195,.15) 45%,transparent 72%);
-  animation:transGlowReveal 2.5s 3.1s cubic-bezier(.25,.46,.45,.94) forwards;
+  background:radial-gradient(circle,rgba(120,180,160,.55) 0%,rgba(170,210,195,.18) 45%,transparent 72%);
+  animation:cardFlash 2.8s 3.00s cubic-bezier(.22,.61,.36,1) forwards;
 }
-@keyframes transGlowReveal{
-  0%{opacity:0;transform:translate(-50%,-50%) scale(.5);filter:blur(8px)}
-  100%{opacity:1;transform:translate(-50%,-50%) scale(1);filter:blur(0)}
+/* 卡片亮光一閃（緩慢綻放版）：色光慢慢浮現到最亮，再慢慢沉澱成底色 */
+@keyframes cardFlash{
+  0%   { opacity:0;    transform:translate(-50%,-50%) scale(.45); filter:blur(12px); }
+  35%  { opacity:1;    transform:translate(-50%,-50%) scale(1.16); filter:blur(0); }
+  55%  { opacity:.92;  transform:translate(-50%,-50%) scale(1.04); filter:blur(0); }
+  100% { opacity:.42;  transform:translate(-50%,-50%) scale(.96);  filter:blur(1px); }
 }
 /* 卡片邊框漸顯金線 */
 .trans-card::after{
@@ -607,21 +773,21 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   pointer-events:none;z-index:1;
   opacity:0;
 }
-.trans-card:nth-child(1)::after{animation:transBorderIn 2s 1.0s cubic-bezier(.25,.46,.45,.94) forwards;}
-.trans-card:nth-child(2)::after{animation:transBorderIn 2s 1.6s cubic-bezier(.25,.46,.45,.94) forwards;}
-.trans-card:nth-child(3)::after{animation:transBorderIn 2s 2.2s cubic-bezier(.25,.46,.45,.94) forwards;}
-.trans-card:nth-child(4)::after{animation:transBorderIn 2s 2.8s cubic-bezier(.25,.46,.45,.94) forwards;}
-.trans-card:nth-child(5)::after{animation:transBorderIn 2s 3.4s cubic-bezier(.25,.46,.45,.94) forwards;}
+.trans-card:nth-child(1)::after{animation:transBorderIn 2s 1.80s cubic-bezier(.25,.46,.45,.94) forwards;}
+.trans-card:nth-child(2)::after{animation:transBorderIn 2s 2.20s cubic-bezier(.25,.46,.45,.94) forwards;}
+.trans-card:nth-child(3)::after{animation:transBorderIn 2s 2.60s cubic-bezier(.25,.46,.45,.94) forwards;}
+.trans-card:nth-child(4)::after{animation:transBorderIn 2s 3.00s cubic-bezier(.25,.46,.45,.94) forwards;}
+.trans-card:nth-child(5)::after{animation:transBorderIn 2s 3.40s cubic-bezier(.25,.46,.45,.94) forwards;}
 @keyframes transBorderIn{
   0%{opacity:0;border-color:rgba(184,144,74,0)}
   100%{opacity:1;border-color:rgba(184,144,74,.25)}
 }
-/* 由上到下依序展開的手風琴節奏 */
-.trans-card:nth-child(1){animation-delay:.30s;}
-.trans-card:nth-child(2){animation-delay:.50s;}
-.trans-card:nth-child(3){animation-delay:.70s;}
-.trans-card:nth-child(4){animation-delay:.90s;}
-.trans-card:nth-child(5){animation-delay:1.10s;}
+/* 由上到下依序展開的手風琴節奏（搭配光芒下移的時序，每張間隔 0.4s 讓節奏清楚） */
+.trans-card:nth-child(1){animation-delay:1.20s;}
+.trans-card:nth-child(2){animation-delay:1.60s;}
+.trans-card:nth-child(3){animation-delay:2.00s;}
+.trans-card:nth-child(4){animation-delay:2.40s;}
+.trans-card:nth-child(5){animation-delay:2.80s;}
 
 .trans-card>*{position:relative;z-index:2;}
 .trans-card-num{
@@ -660,7 +826,7 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
 }
 .trans-hook{
   margin-bottom:clamp(32px,5vw,40px);
-  opacity:0;animation:transUp .7s .9s both;
+  opacity:0;animation:transUp .8s 3.4s both;
 }
 .trans-hook p{
   font-family:'Noto Serif TC',serif;font-size:.82rem;font-weight:300;
@@ -674,15 +840,32 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   padding:14px 48px;border-radius:60px;cursor:pointer;
   box-shadow:0 4px 16px rgba(42,28,14,.12);
   transition:all .35s ease;
-  opacity:0;animation:transUp .7s 1.1s both;
+  opacity:0;animation:transUp .8s 3.6s both;
+  position:relative;
+  isolation:isolate;
+}
+/* 按鈕後的金色光暈——延續五張卡片的閃光節奏，最後一張往下流到這顆按鈕 */
+.trans-cta::before{
+  content:'';
+  position:absolute;
+  inset:-30%;
+  border-radius:inherit;
+  background:radial-gradient(ellipse,
+    rgba(255,215,150,.65) 0%,
+    rgba(255,215,150,.22) 40%,
+    transparent 72%);
+  filter:blur(10px);
+  pointer-events:none;
+  z-index:-1;
+  opacity:0;
+  animation: cardFlash 2.8s 3.80s cubic-bezier(.22,.61,.36,1) forwards;
 }
 @media(hover:hover){.trans-cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(42,28,14,.18);}}
 @keyframes transUp{
   from{opacity:0;transform:translateY(16px)}
   to{opacity:1;transform:translateY(0)}
 }
-/* 觸控回饋 */
-.trans-card:active{transform:scale(.97);}
+/* 觸控回饋（只在實際 CTA 上，卡片不做 active 縮放，避免誤以為是按鈕） */
 .trans-cta:active{transform:scale(.97);}
 
 @media(min-width:768px){
@@ -708,14 +891,15 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
 .round-header{
   flex-shrink:0;
   display:flex;flex-direction:column;align-items:center;
-  padding:50px 24px 8px;
+  /* nav bar 高度（padding 12+12 + line-height ≈ 62-68px）+ 安全區 + 緩衝 */
+  padding:calc(86px + env(safe-area-inset-top)) 24px 8px;
   text-align:center;width:100%;max-width:500px;
 }
 .round-label{
-  font-family:'EB Garamond',serif;font-size:.78rem;font-weight:500;letter-spacing:.48em;
-  color:#5C3D1E;text-transform:uppercase;margin-bottom:16px;
+  font-family:'EB Garamond',serif;font-size:.7rem;font-weight:500;letter-spacing:.4em;
+  color:#5C3D1E;text-transform:uppercase;margin-bottom:14px;
 }
-.round-progress{display:flex;gap:10px;align-items:center;margin-bottom:24px;}
+.round-progress{display:flex;gap:9px;align-items:center;margin-bottom:18px;}
 .rp-dot{
   width:7px;height:7px;border-radius:50%;
   background:rgba(184,144,74,.2);transition:all .4s ease;
@@ -729,8 +913,8 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
 }
 
 .round-q{
-  font-size:1.18rem;font-weight:400;letter-spacing:.06em;
-  color:#5C3D1E;line-height:1.75;margin-bottom:20px;
+  font-size:1.1rem;font-weight:400;letter-spacing:.04em;
+  color:#5C3D1E;line-height:1.6;margin-bottom:14px;
   position:relative;
   padding:12px 24px;
 }
@@ -758,8 +942,8 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   pointer-events:none;
 }
 .round-hint{
-  font-size:.8rem;letter-spacing:.14em;
-  color:rgba(42,28,14,.55);margin-bottom:0;
+  font-size:.74rem;letter-spacing:.1em;
+  color:rgba(42,28,14,.5);margin-bottom:0;
 }
 
 /* Round page entrance animations */
@@ -1130,9 +1314,95 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   color:#5C3D1E;margin-bottom:20px;text-align:center;
 }
 .svc-sub{
-  font-size:.72rem;font-weight:300;letter-spacing:.06em;
-  color:rgba(106,80,40,.42);line-height:1.8;margin-bottom:20px;
-  font-style:italic;text-align:center;
+  font-size:.78rem;font-weight:300;letter-spacing:.05em;
+  color:rgba(106,80,40,.65);line-height:1.95;margin:0 auto 28px;
+  text-align:center;max-width:28em;
+}
+/* ═══ 我可以幫你整理的三件事（服務區三卡片） ═══ */
+.svc-three{
+  width:100%;margin: 12px 0 32px;
+  display:flex;flex-direction:column;gap:14px;
+}
+.svc-three-head{ text-align:center;margin-bottom:8px; }
+.svc-three-eyebrow{
+  font-family:'EB Garamond',serif;font-size:.66rem;letter-spacing:.4em;
+  color:rgba(184,144,74,.62);text-transform:uppercase;margin-bottom:8px;
+}
+.svc-three-title{
+  font-family:'Noto Serif TC',serif;font-size:1.08rem;font-weight:500;
+  letter-spacing:.12em;color:#3A2A14;margin:0 0 10px;line-height:1.5;
+}
+.svc-three-intro{
+  font-family:'Noto Serif TC',serif;font-size:.78rem;font-weight:300;
+  letter-spacing:.04em;color:rgba(106,80,40,.7);line-height:1.95;
+  max-width:30em;margin:0 auto 8px;
+}
+.svc-card{
+  background:rgba(255,253,248,.7);
+  border:1px solid rgba(184,144,74,.24);
+  border-radius:14px;
+  padding:clamp(20px,4vw,26px);
+  box-shadow:0 4px 16px rgba(80,50,20,.06), inset 0 1px 0 rgba(255,255,255,.5);
+  display:flex;flex-direction:column;gap:8px;
+}
+.svc-card-num{
+  font-family:'EB Garamond',serif;font-size:.7rem;letter-spacing:.32em;
+  color:rgba(184,144,74,.7);text-transform:uppercase;
+}
+.svc-card-title{
+  font-family:'Noto Serif TC',serif;font-size:1rem;font-weight:500;
+  letter-spacing:.1em;color:#3A2A14;margin:0;line-height:1.5;
+}
+.svc-card-desc{
+  font-family:'Noto Serif TC',serif;font-size:.82rem;font-weight:300;
+  letter-spacing:.03em;color:rgba(42,28,14,.78);line-height:1.95;
+  margin:0;
+}
+.svc-card-cta{
+  display:inline-flex;align-self:flex-start;align-items:center;
+  margin-top:4px;padding:4px 2px;
+  font-family:'EB Garamond',serif;font-size:.82rem;letter-spacing:.18em;
+  color:rgba(184,144,74,.95);text-decoration:none;
+  border-bottom:1px solid rgba(184,144,74,.4);
+  transition:color .2s, border-color .2s;
+}
+@media(hover:hover){
+  .svc-card-cta:hover{ color:#5C3D1E; border-color:rgba(184,144,74,.85); }
+}
+/* 區塊小標（「我可以協助你」） */
+.svc-section-h{
+  font-family:'Noto Serif TC',serif;font-size:.92rem;font-weight:500;
+  letter-spacing:.16em;color:#3A2A14;margin:24px 0 14px;
+  text-align:center;
+}
+/* 「目前我不提供」溫和區塊 */
+.svc-not-offer{
+  width:100%;margin:18px 0 24px;
+  padding:18px 20px;
+  background:rgba(184,144,74,.05);
+  border:1px dashed rgba(184,144,74,.28);
+  border-radius:12px;
+}
+.svc-not-offer-title{
+  font-family:'EB Garamond',serif;font-size:.66rem;letter-spacing:.32em;
+  color:rgba(92,61,30,.7);text-transform:uppercase;
+  text-align:center;margin-bottom:12px;
+}
+.svc-not-offer-list{
+  list-style:none;display:flex;flex-direction:column;gap:6px;
+  margin-bottom:12px;
+}
+.svc-not-offer-list li{
+  font-family:'Noto Serif TC',serif;font-size:.76rem;font-weight:300;
+  letter-spacing:.03em;color:rgba(50,35,18,.62);line-height:1.7;
+  text-align:center;
+}
+.svc-not-offer-list li::before{ content:'·　'; color:rgba(184,144,74,.5); }
+.svc-not-offer-note{
+  font-family:'Noto Serif TC',serif;font-size:.74rem;font-weight:300;
+  letter-spacing:.04em;color:rgba(106,80,40,.68);line-height:1.9;
+  text-align:center;margin:0;
+  padding-top:10px;border-top:1px dashed rgba(184,144,74,.22);
 }
 .svc-check-list{
   list-style:none;display:flex;flex-direction:column;gap:14px;
@@ -1288,7 +1558,7 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
 ══════════════════════════ */
 @media(min-width:768px){
   /* Intro */
-  .intro-inner{max-width:800px;padding:130px 52px 100px;}
+  .intro-inner{max-width:800px;padding:82px 52px 100px;}
   .intro-title{font-size:2.4rem;}
   .intro-sub{font-size:1.25rem;}
   .intro-eye{font-size:.88rem;margin-bottom:44px;}
@@ -1385,7 +1655,7 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
    DESKTOP RWD (1024px+)
 ══════════════════════════ */
 @media(min-width:1024px){
-  .intro-inner{max-width:920px;padding:140px 64px 120px;}
+  .intro-inner{max-width:920px;padding:92px 64px 120px;}
   .intro-title{font-size:2.7rem;}
   .intro-sub{font-size:1.35rem;}
 
@@ -1663,15 +1933,21 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   animation: symbolEntry 1s .4s cubic-bezier(.34,1.4,.64,1) forwards;
   position: relative;
 }
-/* 符號背後的柔和色光暈（簡約中的光感） */
+/* 符號背後的柔和色光暈（簡約中的光感）— 先暈開、再收斂，像光被點亮 */
 .reveal-symbol::before{
   content:'';
   position:absolute;
   inset:-30%;
   background:radial-gradient(circle, currentColor 0%, transparent 62%);
-  opacity:.24;
+  opacity:0;
   filter:blur(6px);
   pointer-events:none;
+  animation:symbolGlow 1.6s .45s cubic-bezier(.25,.46,.45,.94) both;
+}
+@keyframes symbolGlow{
+  0%   { opacity:0;   transform:scale(.55); }
+  55%  { opacity:.36; transform:scale(1.08); }
+  100% { opacity:.24; transform:scale(1); }
 }
 .reveal-symbol[data-tone="warm"]   { color: #B85530; }
 .reveal-symbol[data-tone="gold"]   { color: #B8904A; }
@@ -1716,17 +1992,19 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
 }
 @media (prefers-reduced-motion: reduce){
   .reveal-symbol,
+  .reveal-symbol::before,
   .reveal-symbol svg .stroke,
   .reveal-symbol svg .filled{
     animation:none; opacity:1; transform:none; stroke-dashoffset:0;
   }
+  .reveal-symbol::before{ opacity:.24; }
 }
 
 .reveal-hero .reveal-type-name{
   font-family:'Noto Serif TC',serif;
   font-size: 2.4rem;
-  font-weight: 400;
-  letter-spacing: .26em;
+  font-weight: 500;
+  letter-spacing: .24em;
   color: #2A1A0A;
   margin: 6px 0 8px;
   line-height: 1.4;
@@ -1758,7 +2036,8 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   margin-bottom: 8px;
   padding-left:.28em;  /* 補正 letter-spacing 的視覺偏移 */
   opacity:0;
-  animation: sIn 1s .8s ease forwards;
+  /* 揭曉感：名字浮現完成後才出現（both 讓延遲期間維持隱形，不被 JS inline 蓋過）*/
+  animation: sIn 1s 2.5s ease both;
 }
 .reveal-hero .reveal-type-sub .sub-divider{
   display:inline-block;
@@ -1774,8 +2053,8 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   opacity: 0;
   transform: translateX(-4px);
   filter: blur(2px);
-  animation: subConfRise .8s 2.0s cubic-bezier(.25,.46,.45,.94) forwards,
-             subConfPulse 3.6s 3.5s ease-in-out infinite;
+  animation: subConfRise .8s 2.9s cubic-bezier(.25,.46,.45,.94) both,
+             subConfPulse 3.6s 4.4s ease-in-out infinite;
 }
 @keyframes subConfRise{
   to { opacity:1; transform: translateX(0); filter: blur(0); }
@@ -1793,7 +2072,7 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   max-width: 92%;
   position:relative;
   opacity: 0;
-  animation: sIn 1.4s 1.6s ease forwards, taglineFloat 5.5s 3.5s ease-in-out infinite;
+  animation: sIn 1.4s 2.8s ease both, taglineFloat 5.5s 4.6s ease-in-out infinite;
 }
 @keyframes taglineFloat{
   0%, 100% { transform: translateY(0); }
@@ -1809,7 +2088,7 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
 .reveal-hero .reveal-rarity{
   margin: 0;
   opacity: 0;
-  animation: sIn 1s 1.6s ease forwards;
+  animation: sIn 1s 3.1s ease both;
 }
 
 /* 章節間裝飾線 */
@@ -1821,13 +2100,13 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   margin: 14px auto 0;
   color: rgba(184,144,74,.42);
   opacity: 0;
-  animation: sIn 1s 1.8s ease forwards;
+  animation: sIn 1s 3.3s ease both;
 }
 /* 兩條橫線從中心往外畫 */
 .section-divider line{
   stroke-dasharray: 40;
   stroke-dashoffset: 40;
-  animation: sectionLineDraw 1s 2.0s cubic-bezier(.25,.46,.45,.94) forwards;
+  animation: sectionLineDraw 1s 3.5s cubic-bezier(.25,.46,.45,.94) both;
 }
 @keyframes sectionLineDraw{
   to { stroke-dashoffset: 0; }
@@ -1840,12 +2119,12 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   transform: scale(.3);
   animation: sectionDotPop .55s cubic-bezier(.34,1.4,.64,1) forwards;
 }
-.section-divider circle:nth-of-type(1){ animation-delay: 2.55s; }
-.section-divider circle:nth-of-type(3){ animation-delay: 2.85s; }
+.section-divider circle:nth-of-type(1){ animation-delay: 3.85s; }
+.section-divider circle:nth-of-type(3){ animation-delay: 4.15s; }
 .section-divider circle[fill="none"]{
   stroke-dasharray: 14;
   stroke-dashoffset: 14;
-  animation: sectionRingDraw 1s 2.7s cubic-bezier(.25,.46,.45,.94) forwards;
+  animation: sectionRingDraw 1s 4.0s cubic-bezier(.25,.46,.45,.94) both;
 }
 @keyframes sectionDotPop{
   0%   { opacity:0; transform: scale(.3); }
@@ -1929,17 +2208,17 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
 }
 .q-option{
   position:relative;
-  padding:18px 22px;
+  padding:15px 18px;
   background:#FFFFFF;
   border:1px solid rgba(184,144,74,.18);
   border-radius:14px;
   cursor:pointer;
   text-align:left;
   font-family:'Noto Serif TC',serif;
-  font-size:.95rem;
-  line-height:1.55;
+  font-size:.92rem;
+  line-height:1.5;
   color:#3A2A14;
-  letter-spacing:.04em;
+  letter-spacing:.03em;
   transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
   box-shadow:0 2px 10px rgba(80,50,20,.04);
   opacity:0;transform:translateY(10px);
@@ -1975,11 +2254,11 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   background:#B8904A;
   box-shadow:inset 0 0 0 4px #FFFBF2;
 }
-.q-option-main{font-weight:500;}
+.q-option-main{font-weight:400;}
 .q-option-sub{
-  display:block;margin-top:6px;
-  font-size:.78rem;color:rgba(106,80,40,.55);
-  letter-spacing:.02em;font-weight:400;
+  display:block;margin-top:4px;
+  font-size:.72rem;color:rgba(106,80,40,.5);
+  letter-spacing:.02em;font-weight:300;line-height:1.55;
 }
 @media(min-width:720px){
   .q-options{max-width:680px;padding:18px 32px 100px;gap:12px;}
@@ -2261,6 +2540,40 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   font-style: normal;
   font-size: 1.05em;
   letter-spacing: .04em;
+}
+/* 推導透明化：7 個切面的點陣，指向主型的點亮成金色 */
+.trace-viz{
+  display:flex;justify-content:center;align-items:center;
+  gap:9px;margin-bottom:10px;
+}
+.trace-dot{
+  width:7px;height:7px;border-radius:50%;
+  box-sizing:border-box;opacity:0;
+  animation:traceDotIn .5s cubic-bezier(.34,1.42,.64,1) both;
+  animation-delay:calc(1.7s + var(--ti,0) * .09s);
+}
+.trace-dot.grp{margin-left:14px;position:relative;}
+.trace-dot.grp::before{
+  content:'';position:absolute;left:-9px;top:50%;
+  width:1px;height:12px;transform:translateY(-50%);
+  background:rgba(184,144,74,.3);
+}
+.trace-dot.off{
+  border:1px solid rgba(184,144,74,.34);
+  background:transparent;
+}
+.trace-dot.on{
+  border:1px solid transparent;
+  background:#B8904A;
+  box-shadow:0 0 8px 1px rgba(184,144,74,.42);
+}
+@keyframes traceDotIn{
+  0%  {opacity:0;transform:scale(.2);}
+  60% {opacity:1;transform:scale(1.3);}
+  100%{opacity:1;transform:scale(1);}
+}
+@media(prefers-reduced-motion:reduce){
+  .trace-dot{animation:none;opacity:1;transform:none;}
 }
 .reveal-colors{
   display:flex;justify-content:center;align-items:flex-end;gap:6px;
@@ -2679,6 +2992,92 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   color:#8E6A2E;
   font-weight:500;
 }
+/* ═══ 一句話品牌色彩提醒（適合截圖分享） ═══ */
+.reveal-reminder{
+  margin: 24px 0 18px;
+  padding: 22px 22px 24px;
+  background: rgba(255,253,248,.7);
+  border: 1px solid rgba(184,144,74,.28);
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(80,50,20,.06), inset 0 1px 0 rgba(255,255,255,.5);
+}
+.reveal-reminder-eyebrow{
+  font-family:'EB Garamond',serif;
+  font-size:.62rem; letter-spacing:.4em;
+  color:rgba(184,144,74,.65); text-transform:uppercase;
+  margin-bottom:8px;
+}
+.reveal-reminder-title{
+  font-family:'Noto Serif TC',serif;
+  font-size:.84rem; font-weight:500;
+  letter-spacing:.16em; color:#3A2A14;
+  margin: 0 0 12px;
+}
+.reveal-reminder-text{
+  font-family:'Noto Serif TC',serif;
+  font-size:.92rem; font-weight:400;
+  letter-spacing:.06em; line-height:2.05;
+  color:#3A2A14; margin: 0;
+  word-break:keep-all; text-wrap:balance;
+}
+/* ═══ 一鍵複製分享文字 ═══ */
+.share-copy-block{
+  margin: 16px 0 14px;
+  padding: 18px 18px 16px;
+  background: rgba(184,144,74,.05);
+  border: 1px dashed rgba(184,144,74,.3);
+  border-radius: 12px;
+  display:flex; flex-direction:column; gap:10px;
+}
+.share-copy-eyebrow{
+  font-family:'EB Garamond',serif;
+  font-size:.6rem; letter-spacing:.36em;
+  color:rgba(184,144,74,.65); text-transform:uppercase;
+  text-align:center;
+}
+.share-copy-title{
+  font-family:'Noto Serif TC',serif;
+  font-size:.82rem; font-weight:500;
+  letter-spacing:.14em; color:#3A2A14;
+  text-align:center; margin: 0 0 4px;
+}
+.share-copy-item{
+  display:flex; align-items:stretch; gap:8px;
+  background: rgba(255,253,248,.6);
+  border: 1px solid rgba(184,144,74,.22);
+  border-radius:10px; padding: 10px 12px;
+}
+.share-copy-text{
+  flex:1; margin:0;
+  font-family:'Noto Serif TC',serif;
+  font-size:.78rem; font-weight:300;
+  letter-spacing:.03em; line-height:1.85;
+  color:rgba(42,28,14,.78);
+  user-select:text;
+}
+.share-copy-btn{
+  flex-shrink:0;
+  align-self:center;
+  font-family:'EB Garamond',serif;
+  font-size:.7rem; letter-spacing:.2em;
+  color:#FFFCF6; min-height:36px;
+  background:linear-gradient(135deg,#B8904A,#D4A860);
+  border:none; border-radius:60px;
+  padding: 6px 14px;cursor:pointer;
+  transition: transform .2s, box-shadow .2s;
+  box-shadow: 0 2px 6px rgba(184,144,74,.22), inset 0 1px 0 rgba(255,255,255,.4);
+}
+.share-copy-btn:active{ transform:scale(.95); }
+@media(hover:hover){
+  .share-copy-btn:hover{
+    box-shadow: 0 4px 12px rgba(184,144,74,.32), inset 0 1px 0 rgba(255,255,255,.5);
+  }
+}
+.share-copy-btn.copied{
+  background:linear-gradient(135deg,#5C3D1E,#7A5530);
+}
+.share-copy-btn.copied span::before{ content:'✓ '; }
 
 /* ── 當下 vs 期望 對照區塊 ── */
 .contrast-block{
@@ -2835,16 +3234,15 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   border:1px solid rgba(184,144,74,.28);
   color:#8E6A2E;
   opacity:0;
-  transform: scale(.5) rotate(-6deg);
-  filter: blur(2px);
-  animation: contrastBadgeStamp .9s 3.25s cubic-bezier(.34,1.42,.64,1) forwards,
-             contrastBadgeGlow 3.5s 4.5s ease-in-out infinite;
+  transform: translateY(-10px);
+  filter: blur(3px);
+  /* 由上往下漸顯，無 scale / 旋轉 / 彈跳，跟其他敘事段落同一種語氣 */
+  animation: contrastBadgeFade .9s 3.6s cubic-bezier(.25,.46,.45,.94) forwards,
+             contrastBadgeGlow 3.5s 5.0s ease-in-out infinite;
 }
-@keyframes contrastBadgeStamp{
-  0%   { opacity:0; transform:scale(.5) rotate(-6deg); filter:blur(2px); }
-  55%  { opacity:1; transform:scale(1.12) rotate(2deg); filter:blur(0); }
-  80%  { opacity:1; transform:scale(.97) rotate(-.5deg); filter:blur(0); }
-  100% { opacity:1; transform:scale(1) rotate(0); filter:blur(0); }
+@keyframes contrastBadgeFade{
+  from { opacity:0; transform: translateY(-10px); filter: blur(3px); }
+  to   { opacity:1; transform: translateY(0);     filter: blur(0); }
 }
 @keyframes contrastBadgeGlow{
   0%,100%{ box-shadow: 0 0 0 0 rgba(184,144,74,0); }
@@ -3024,15 +3422,6 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   margin-bottom: 0;
   background: transparent;
   border-bottom: 1px dashed rgba(184,144,74,.18);
-  animation: pSectionIn .8s cubic-bezier(.25,.46,.45,.94) forwards;
-}
-/* 三段依序顯現：淡入 → 金線 → icon → 標題 → 底線 */
-.reveal-p-section:nth-child(1){ animation-delay: 2.0s; }
-.reveal-p-section:nth-child(2){ animation-delay: 2.6s; }
-.reveal-p-section:nth-child(3){ animation-delay: 3.2s; }
-@keyframes pSectionIn{
-  from{ opacity:0; transform:translateY(10px); }
-  to{ opacity:1; transform:translateY(0); }
 }
 .reveal-p-section:last-child{ border-bottom: none; padding-bottom: 14px; }
 .reveal-p-section:first-child{ padding-top: 8px; }
@@ -3301,7 +3690,7 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
 #pg-reveal.active .reveal-title{animation:revealFadeUp .8s .15s both;}
 #pg-reveal.active .reveal-sub{animation:revealFadeUp .7s .25s both;}
 #pg-reveal.active .reveal-line{animation:revealLineExpand 1s .3s both;}
-#pg-reveal.active .reveal-diag-block{animation:revealCardIn .9s .35s both;}
+#pg-reveal.active .reveal-diag-block{animation:revealCardIn .9s 3.4s both;}
 
 /* 色票顯影動畫：模糊→清晰 */
 #pg-reveal.active .reveal-sw{animation:colorDevelop 1.2s both;}
@@ -3530,7 +3919,9 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   background:#FFFCF8;
   border:1.5px solid rgba(184,144,74,.3);
   border-radius:16px;padding:clamp(20px,5vw,28px);
-  width:90vw;max-width:400px;
+  width:90vw;max-width:480px;
+  max-height:88vh;overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
   box-shadow:0 10px 36px rgba(80,50,20,.14),0 2px 10px rgba(80,50,20,.08);
   transition:opacity .3s ease,transform .3s ease,visibility .3s ease;
 }
@@ -3547,15 +3938,34 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   letter-spacing:.08em;color:#5C3D1E;margin:0 0 4px;
 }
 .about-modal-subtitle{
-  font-family:'EB Garamond',serif;font-size:.65rem;
-  letter-spacing:.15em;color:rgba(184,144,74,.65);
-  text-transform:uppercase;margin:0;
+  font-family:'Noto Serif TC',serif;font-size:.74rem;font-weight:400;
+  letter-spacing:.18em;color:rgba(184,144,74,.78);
+  margin:0;
+}
+.about-modal-positioning{
+  font-family:'Noto Serif TC',serif;font-size:.72rem;font-weight:300;
+  letter-spacing:.05em;color:rgba(106,80,40,.62);
+  line-height:1.85;margin:14px 0 0;
+  padding-top:14px;
+  border-top:1px solid rgba(184,144,74,.18);
 }
 .about-modal-body{margin-bottom:20px}
 .about-modal-intro{
-  font-family:'Noto Serif TC',serif;font-size:.78rem;
-  letter-spacing:.04em;color:rgba(42,28,14,.72);
-  line-height:1.85;margin:0 0 18px;text-align:center;
+  font-family:'Noto Serif TC',serif;font-size:.82rem;
+  letter-spacing:.03em;color:rgba(42,28,14,.78);
+  line-height:1.95;margin:0 0 16px;text-align:left;
+}
+.about-modal-intro strong{
+  color:#8E6A2E;font-weight:500;
+  letter-spacing:.04em;
+}
+.about-modal-closing{
+  font-family:'Noto Serif TC',serif;font-size:.78rem;font-weight:300;
+  letter-spacing:.06em;color:rgba(106,80,40,.78);
+  line-height:2.05;margin:18px 0 0;text-align:center;
+  padding:14px 8px 4px;
+  border-top:1px dashed rgba(184,144,74,.25);
+  font-style:italic;
 }
 .about-modal-services{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
 .about-modal-services li{
@@ -3577,12 +3987,209 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
 @media(hover:hover){.about-modal-cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(42,28,14,.18)}}
 .about-modal-cta:active{transform:scale(.96)}
 .nav-about{
-  font-family:'EB Garamond',serif;font-size:.72rem;
-  letter-spacing:.12em;color:rgba(106,80,40,.5);min-height:44px;
-  background:none;border:none;cursor:pointer;padding:6px 10px;
-  transition:color .25s;text-transform:uppercase;
+  font-family:'EB Garamond',serif;font-size:.74rem;
+  letter-spacing:.08em;color:rgba(106,80,40,.7);
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:38px;
+  background:rgba(255,253,248,.55);
+  border:1px solid rgba(184,144,74,.34);
+  border-radius:60px;
+  cursor:pointer;
+  padding:7px 18px;
+  transition:color .28s ease, background .28s ease, border-color .28s ease, box-shadow .28s ease;
+  margin-left:auto;
+  box-shadow:0 1px 4px rgba(80,50,20,.06), inset 0 1px 0 rgba(255,255,255,.55);
 }
-@media(hover:hover){.nav-about:hover{color:rgba(184,144,74,.8)}}
+.nav-about .ab-zh{
+  font-family:'Noto Serif TC',serif;
+  margin-left:.4em;letter-spacing:.04em;
+}
+@media(hover:hover){
+  .nav-about:hover{
+    color:rgba(184,144,74,.95);
+    border-color:rgba(184,144,74,.6);
+    background:rgba(255,250,240,.8);
+    box-shadow:0 4px 12px rgba(184,144,74,.18), inset 0 1px 0 rgba(255,255,255,.7);
+  }
+}
+.nav-about:active{transform:scale(.97);}
+
+/* ═══════════════════════════════════════
+   漢堡選單按鈕（nav 上的觸發器）
+═══════════════════════════════════════ */
+.nav-menu-btn{
+  display:inline-flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  gap: 4px;
+  width:42px; height:42px;
+  background: rgba(255,253,248,.55);
+  border: 1px solid rgba(184,144,74,.34);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 8px;
+  transition: background .25s, border-color .25s, transform .15s, box-shadow .25s;
+  box-shadow: 0 1px 4px rgba(80,50,20,.06), inset 0 1px 0 rgba(255,255,255,.55);
+}
+.nav-menu-btn .ham-line{
+  display:block; width:16px; height:1px;
+  background: rgba(106,80,40,.78);
+  border-radius: 1px;
+  transition: transform .35s ease, opacity .25s ease, background .25s;
+}
+@media(hover:hover){
+  .nav-menu-btn:hover{
+    background: rgba(255,250,240,.85);
+    border-color: rgba(184,144,74,.6);
+    box-shadow: 0 4px 12px rgba(184,144,74,.18), inset 0 1px 0 rgba(255,255,255,.7);
+  }
+  .nav-menu-btn:hover .ham-line{ background: #8E6A2E; }
+}
+.nav-menu-btn:active{ transform: scale(.93); }
+/* 開啟狀態：漢堡變 X */
+.nav-menu-btn.open .ham-line:nth-child(1){ transform: translateY(5px) rotate(45deg); }
+.nav-menu-btn.open .ham-line:nth-child(2){ opacity: 0; }
+.nav-menu-btn.open .ham-line:nth-child(3){ transform: translateY(-5px) rotate(-45deg); }
+
+/* ═══════════════════════════════════════
+   抽屜選單
+═══════════════════════════════════════ */
+.nav-overlay{
+  position: fixed; inset: 0; z-index: 9990;
+  background: rgba(42,28,14,.32);
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+  opacity: 0; pointer-events: none;
+  transition: opacity .35s ease;
+}
+.nav-overlay.visible{ opacity: 1; pointer-events: auto; }
+
+.nav-drawer{
+  position: fixed; top: 0; right: 0; bottom: 0;
+  width: min(360px, 92vw);
+  z-index: 9995;
+  background:
+    radial-gradient(ellipse 60% 40% at 20% 10%, rgba(232,210,172,.4) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(220,195,158,.32) 0%, transparent 55%),
+    #FDFAF4;
+  border-left: 1px solid rgba(184,144,74,.28);
+  box-shadow: -8px 0 32px rgba(80,50,20,.18);
+  padding: clamp(60px, 10vh, 88px) clamp(24px, 6vw, 36px) clamp(28px, 5vh, 40px);
+  display: flex; flex-direction: column; gap: 22px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transform: translateX(100%);
+  transition: transform .42s cubic-bezier(.4,0,.2,1);
+}
+.nav-drawer.open{ transform: translateX(0); }
+
+.nav-drawer-close{
+  position: absolute; top: 14px; right: 14px;
+  width: 40px; height: 40px;
+  font-size: 1.5rem; line-height: 1;
+  font-family: 'EB Garamond', serif;
+  color: rgba(106,80,40,.65);
+  background: none; border: none; cursor: pointer;
+  border-radius: 50%;
+  transition: color .25s, background .25s;
+}
+@media(hover:hover){
+  .nav-drawer-close:hover{ color: #5C3D1E; background: rgba(184,144,74,.08); }
+}
+
+.nav-drawer-eyebrow{
+  font-family: 'EB Garamond', serif;
+  font-size: .7rem; letter-spacing: .42em;
+  color: rgba(184,144,74,.65); text-transform: uppercase;
+  margin: 0;
+}
+.nav-drawer-title{
+  font-family: 'Noto Serif TC', serif;
+  font-size: .92rem; font-weight: 500;
+  letter-spacing: .14em; color: #3A2A14;
+  margin: -10px 0 4px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(184,144,74,.2);
+}
+
+.nav-drawer-section{ display: flex; flex-direction: column; gap: 8px; }
+.nav-drawer-label{
+  font-family: 'EB Garamond', serif;
+  font-size: .62rem; letter-spacing: .32em;
+  color: rgba(106,80,40,.55); text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.nav-drawer-link{
+  display: flex; align-items: center; gap: 12px;
+  width: 100%;
+  padding: 11px 14px;
+  min-height: 44px;
+  font-family: 'Noto Serif TC', serif;
+  font-size: .88rem; letter-spacing: .06em;
+  color: #3A2A14; text-align: left;
+  background: rgba(255,253,248,.55);
+  border: 1px solid rgba(184,144,74,.18);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background .25s, border-color .25s, transform .15s, color .25s;
+}
+@media(hover:hover){
+  .nav-drawer-link:hover{
+    background: rgba(255,250,240,.85);
+    border-color: rgba(184,144,74,.45);
+    transform: translateX(2px);
+  }
+  .nav-drawer-link:hover .nav-drawer-arrow{
+    transform: translateX(4px); color: #8E6A2E;
+  }
+}
+.nav-drawer-link:active{ transform: scale(.98); }
+.nav-drawer-num{
+  font-family: 'EB Garamond', serif;
+  font-size: .76rem; letter-spacing: .18em;
+  color: rgba(184,144,74,.7);
+}
+.nav-drawer-name{ flex: 1; }
+.nav-drawer-arrow{
+  font-family: 'EB Garamond', serif;
+  font-size: .88rem; color: rgba(184,144,74,.55);
+  transition: transform .25s, color .25s;
+}
+/* 「測我的品牌色彩人格」主 CTA 在抽屜中變深色金邊 */
+.nav-drawer-cta{
+  background: linear-gradient(135deg,#3A2A14 0%,#5C4020 50%,#3A2A14 100%);
+  color: #FFFCF6;
+  border-color: rgba(184,144,74,.4);
+  box-shadow: 0 4px 14px rgba(42,28,14,.22), inset 0 1px 0 rgba(255,255,255,.15);
+}
+.nav-drawer-cta .nav-drawer-arrow{ color: rgba(232,200,140,.85); }
+@media(hover:hover){
+  .nav-drawer-cta:hover{
+    background: linear-gradient(135deg,#3A2A14 0%,#6E5028 50%,#3A2A14 100%);
+    color: #FFFCF6;
+    border-color: rgba(184,144,74,.6);
+    box-shadow: 0 6px 18px rgba(42,28,14,.32), inset 0 1px 0 rgba(255,255,255,.2);
+  }
+  .nav-drawer-cta:hover .nav-drawer-arrow{ color: #FFE8B8; }
+}
+
+.nav-drawer-footer{
+  margin-top: auto; padding-top: 18px;
+  border-top: 1px dashed rgba(184,144,74,.22);
+  text-align: center;
+}
+.nav-drawer-footer a{
+  font-family: 'EB Garamond', serif;
+  font-size: .78rem; letter-spacing: .18em;
+  color: rgba(184,144,74,.78); text-decoration: none;
+  border-bottom: 1px solid rgba(184,144,74,.3);
+  padding-bottom: 2px;
+}
+@media(hover:hover){
+  .nav-drawer-footer a:hover{ color: #5C3D1E; border-color: rgba(184,144,74,.75); }
+}
+
+/* 避免抽屜開啟時背景頁面滾動 */
+body.nav-drawer-open{ overflow: hidden; }
 
 /* ════ PORTFOLIO PAGE ════ */
 #pg-portfolio{background:#FAF7F2}
@@ -3604,6 +4211,85 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   word-break:keep-all;text-wrap:balance;
 }
 .portfolio-sub{font-size:.65rem;letter-spacing:.14em;color:rgba(106,80,40,.38);margin:0}
+.portfolio-subtitle{
+  font-family:'Noto Serif TC',serif;font-size:.78rem;font-weight:300;
+  letter-spacing:.18em;color:rgba(106,80,40,.62);
+  margin:8px 0 clamp(28px,5vw,40px);text-align:center;
+  animation:fadeUp .9s .2s both;
+}
+/* ── 三組 Case Studies（A / B / C 分區） ── */
+.pf-section{
+  margin-bottom:clamp(36px,6vw,52px);
+  animation:fadeUp .9s both;
+}
+.pf-section:nth-of-type(1){animation-delay:.3s;}
+.pf-section:nth-of-type(2){animation-delay:.5s;}
+.pf-section:nth-of-type(3){animation-delay:.7s;}
+.pf-section-head{
+  display:flex;align-items:flex-start;gap:14px;
+  margin-bottom:clamp(16px,3vw,22px);
+  padding-bottom:clamp(10px,2vw,14px);
+  border-bottom:1px solid rgba(184,144,74,.22);
+}
+.pf-section-tag{
+  font-family:'EB Garamond',serif;font-size:1.05rem;
+  letter-spacing:.04em;color:rgba(184,144,74,.85);
+  width:38px;height:38px;display:inline-flex;
+  align-items:center;justify-content:center;
+  border:1px solid rgba(184,144,74,.42);border-radius:50%;
+  flex-shrink:0;
+  background:rgba(255,253,248,.6);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.6);
+}
+.pf-section-title{
+  font-family:'Noto Serif TC',serif;font-size:1rem;font-weight:500;
+  letter-spacing:.08em;color:#3A2A14;margin:2px 0 4px;line-height:1.4;
+}
+.pf-section-sub{
+  font-family:'Noto Serif TC',serif;font-size:.74rem;font-weight:300;
+  letter-spacing:.04em;color:rgba(106,80,40,.6);
+  line-height:1.7;
+}
+.pf-case{
+  background:rgba(255,253,248,.7);
+  border:1px solid rgba(184,144,74,.22);
+  border-radius:14px;
+  padding:clamp(20px,4vw,26px);
+  box-shadow:0 4px 16px rgba(80,50,20,.06), inset 0 1px 0 rgba(255,255,255,.5);
+  margin-bottom:14px;
+}
+.pf-case-num{
+  font-family:'EB Garamond',serif;font-size:.66rem;
+  letter-spacing:.32em;color:rgba(184,144,74,.62);
+  text-transform:uppercase;margin-bottom:6px;
+}
+.pf-case-title{
+  font-family:'Noto Serif TC',serif;font-size:.98rem;font-weight:500;
+  letter-spacing:.06em;color:#3A2A14;
+  margin:0 0 14px;line-height:1.5;
+}
+.pf-case-field{
+  padding:10px 0;
+  border-top:1px dashed rgba(184,144,74,.2);
+}
+.pf-case-field:first-of-type{border-top:none;padding-top:4px;}
+.pf-case-label{
+  font-family:'Noto Serif TC',serif;font-size:.7rem;font-weight:500;
+  letter-spacing:.18em;color:rgba(184,144,74,.82);
+  margin-bottom:6px;
+}
+.pf-case-text{
+  font-family:'Noto Serif TC',serif;font-size:.84rem;font-weight:300;
+  letter-spacing:.03em;color:rgba(42,28,14,.78);
+  line-height:1.9;margin:0;
+}
+.pf-case-meta{
+  margin-top:14px;padding-top:12px;
+  border-top:1px dashed rgba(184,144,74,.18);
+  font-family:'Noto Serif TC',serif;font-size:.72rem;font-weight:300;
+  letter-spacing:.06em;color:rgba(106,80,40,.62);
+  font-style:italic;line-height:1.7;
+}
 .portfolio-concept{
   width:100%;padding:clamp(18px,4vw,24px);background:#fff;
   border:1px solid rgba(184,144,74,.15);border-radius:16px;
@@ -3758,21 +4444,79 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
 
 <!-- ── NAV ── -->
 <nav class="nav" id="mainNav">
-  <button class="nav-about" onclick="toggleAboutModal()">ABOUT</button>
   <button class="nav-back hidden" id="navBack" onclick="navBack()">← 上一步</button>
-  <div class="nav-logo">Hannah Chen</div>
+  <button class="nav-about" onclick="toggleAboutModal()">About<span class="ab-zh">青青</span></button>
+  <button class="nav-menu-btn" onclick="toggleNavMenu()" aria-label="開啟選單" aria-controls="navDrawer" aria-expanded="false" id="navMenuBtn">
+    <span class="ham-line"></span>
+    <span class="ham-line"></span>
+    <span class="ham-line"></span>
+  </button>
   <button class="nav-home hidden" id="navHome" onclick="goHome()">首頁</button>
 </nav>
+
+<!-- ═══ 漢堡選單抽屜（從右側滑入） ═══ -->
+<div class="nav-overlay" id="navOverlay" onclick="toggleNavMenu()" aria-hidden="true"></div>
+<aside class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="主選單" aria-hidden="true">
+  <button class="nav-drawer-close" onclick="toggleNavMenu()" aria-label="關閉選單">&times;</button>
+  <div class="nav-drawer-eyebrow">Menu</div>
+  <div class="nav-drawer-title">青青｜品牌美感整理師</div>
+
+  <div class="nav-drawer-section">
+    <div class="nav-drawer-label">從這裡開始</div>
+    <button class="nav-drawer-link nav-drawer-cta" onclick="closeDrawerThen(startFlow)">
+      <span>測我的品牌色彩人格</span>
+      <span class="nav-drawer-arrow">→</span>
+    </button>
+  </div>
+
+  <div class="nav-drawer-section">
+    <div class="nav-drawer-label">我可以幫你整理的三件事</div>
+    <button class="nav-drawer-link" onclick="closeDrawerThen(goToService)">
+      <span class="nav-drawer-num">01</span>
+      <span class="nav-drawer-name">IG 版面整理</span>
+      <span class="nav-drawer-arrow">→</span>
+    </button>
+    <button class="nav-drawer-link" onclick="closeDrawerThen(goToService)">
+      <span class="nav-drawer-num">02</span>
+      <span class="nav-drawer-name">品牌配色整理</span>
+      <span class="nav-drawer-arrow">→</span>
+    </button>
+    <button class="nav-drawer-link" onclick="closeDrawerThen(goToService)">
+      <span class="nav-drawer-num">03</span>
+      <span class="nav-drawer-name">互動網站整理</span>
+      <span class="nav-drawer-arrow">→</span>
+    </button>
+  </div>
+
+  <div class="nav-drawer-section">
+    <div class="nav-drawer-label">更多</div>
+    <button class="nav-drawer-link" onclick="closeDrawerThen(function(){ goTo('pg-portfolio'); })">
+      <span class="nav-drawer-name">作品與整理案例</span>
+      <span class="nav-drawer-arrow">→</span>
+    </button>
+    <button class="nav-drawer-link" onclick="closeDrawerThen(toggleAboutModal)">
+      <span class="nav-drawer-name">About 青青</span>
+      <span class="nav-drawer-arrow">→</span>
+    </button>
+    <button class="nav-drawer-link" onclick="closeDrawerThen(goToService)">
+      <span class="nav-drawer-name">預約整理諮詢</span>
+      <span class="nav-drawer-arrow">→</span>
+    </button>
+  </div>
+
+  <div class="nav-drawer-footer">
+    <a href="https://www.threads.com/@hannahchen0505949?hl=zh-tw" target="_blank" rel="noopener">↗ @hannahchen0505949</a>
+  </div>
+</aside>
 
 <!-- ══════════════════════════
      INTRO PAGE
 ══════════════════════════ -->
 <div class="page active" id="pg-intro">
   <div class="intro-inner">
-    <div class="intro-eye">Brand Color Quiz</div>
-    <h1 class="intro-title">這個顏色，適合你的品牌嗎？</h1>
-    <div class="intro-sub">用我的 105 色票系統，幫你判斷品牌色是否符合你的氣質、服務與 IG 版面需求。</div>
-    <div class="intro-line"></div>
+    <div class="intro-eye">Brand Aesthetics Organizer</div>
+    <h1 class="intro-title">讓對的人，<br>一眼認出你。</h1>
+    <!-- 標題下方的色票動畫（保留原本的浮現節奏） -->
     <div class="intro-palette">
       <div class="ip-sw" style="width:22px;height:36px;background:linear-gradient(158deg,#881428,#CC2E60)"></div>
       <div class="ip-sw" style="width:22px;height:42px;background:linear-gradient(158deg,#A04010,#C86018)"></div>
@@ -3781,11 +4525,28 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
       <div class="ip-sw" style="width:22px;height:36px;background:linear-gradient(158deg,#0E2A5C,#2E4A6B)"></div>
       <div class="ip-sw" style="width:22px;height:30px;background:linear-gradient(158deg,#987898,#C0A8C0)"></div>
     </div>
-    <div class="intro-quote">
-      我相信沒有人是「標準色」，<br>你就是獨一無二的色彩。
+    <div class="intro-sub">把你原本就有的氣質，<br>整理成被記住的視覺語言。</div>
+    <!-- 三主題：讓訪客馬上知道我做什麼（每張都是按鈕，→ 箭頭強化點擊感） -->
+    <div class="intro-themes" role="list" aria-label="我可以幫你整理的三件事">
+      <button class="intro-theme" role="listitem" onclick="goToService()" aria-label="IG 版面整理">
+        <span class="theme-num">01</span>
+        <span class="theme-name">IG 版面整理</span>
+        <span class="theme-arrow" aria-hidden="true">→</span>
+      </button>
+      <button class="intro-theme" role="listitem" onclick="goToService()" aria-label="品牌配色整理">
+        <span class="theme-num">02</span>
+        <span class="theme-name">品牌配色整理</span>
+        <span class="theme-arrow" aria-hidden="true">→</span>
+      </button>
+      <button class="intro-theme" role="listitem" onclick="goToService()" aria-label="互動網站整理">
+        <span class="theme-num">03</span>
+        <span class="theme-name">互動網站整理</span>
+        <span class="theme-arrow" aria-hidden="true">→</span>
+      </button>
     </div>
-    <div class="intro-flow-hint">免費色票測驗 · 約 2 分鐘完成<br><span>✦ 最後可預約一對一諮詢帶走品牌報告</span></div>
-    <button class="intro-cta" onclick="startFlow()">開始測驗</button>
+    <div class="intro-flow-hint">免費品牌色彩測驗 · 約 2 分鐘<br><span>完成後可下載品牌色彩快照</span></div>
+    <button class="intro-cta" onclick="startFlow()">測我的品牌色彩人格</button>
+    <button class="intro-about-link" onclick="toggleAboutModal()">About<span class="ab-zh">青青</span></button>
   </div>
 </div>
 
@@ -3795,9 +4556,9 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
 <div class="page" id="pg-intro-transition">
   <div class="trans-inner">
     <div class="trans-header">
-      <div class="trans-eyebrow">About This Journey</div>
+      <div class="trans-eyebrow">A Moment to Settle</div>
       <h2 class="trans-title">五個切面，<br>畫出你的品牌光譜</h2>
-      <p class="trans-subtitle">不是貼標籤，是讓你看見自己在 7 種品牌氣質的光譜上，落在哪</p>
+      <p class="trans-subtitle">深呼吸一下，接下來每一題都憑直覺就好——沒有對錯</p>
     </div>
 
     <div class="trans-cards">
@@ -3811,7 +4572,7 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
       <div class="trans-card">
         <div class="trans-card-num">02</div>
         <div class="trans-card-divider"></div>
-        <div class="trans-card-title">排斥</div>
+        <div class="trans-card-title">堅持</div>
         <div class="trans-card-desc">不希望被誤解成什麼</div>
       </div>
 
@@ -3832,7 +4593,7 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
       <div class="trans-card">
         <div class="trans-card-num">05</div>
         <div class="trans-card-divider"></div>
-        <div class="trans-card-title">挑色</div>
+        <div class="trans-card-title">選色</div>
         <div class="trans-card-desc">三輪選色——現在的你 / 品牌現狀 / 品牌方向</div>
       </div>
     </div>
@@ -3841,7 +4602,7 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
       <p>每題只有「直覺答案」沒有對錯。<br>4 題特質 + 3 輪選色，交叉診斷比單題更接近真實。</p>
     </div>
 
-    <button class="trans-cta" onclick="goQuiz(1)">開始診斷</button>
+    <button class="trans-cta" onclick="goQuiz(1)">開始測驗</button>
   </div>
 </div>
 
@@ -3869,7 +4630,7 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
 ══════════════════════════ -->
 <div class="page round-page quiz-page" id="pg-q2">
   <div class="round-header">
-    <div class="round-label">Question 02 · 排斥</div>
+    <div class="round-label">Question 02 · 堅持</div>
     <div class="round-progress">
       <div class="rp-dot done" id="qdot2-1"></div>
       <div class="rp-dot active" id="qdot2-2"></div>
@@ -3916,7 +4677,7 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
       <div class="rp-dot" id="qdot4-5"></div>
     </div>
     <div class="round-q">當別人想起你時，<br>你希望被記住的是？</div>
-    <div class="round-hint">最希望變成那種「她就是 ___ 的人」</div>
+    <div class="round-hint">最希望變成那種「他就是 ___ 的人」</div>
   </div>
   <div class="q-options" id="q4options"></div>
 </div>
@@ -3957,7 +4718,7 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
       <div class="rp-dot done" id="qdot6-4"></div>
       <div class="rp-dot active half" id="qdot6-5"></div>
     </div>
-    <div class="round-q">挑 2 顆顏色，<br>最像「你的品牌現在」</div>
+    <div class="round-q">挑 2 顆顏色，<br>最像「你現在品牌的感覺」</div>
     <div class="round-hint">品牌目前對外呈現的樣貌——不是想像中的版本</div>
     <div class="round-sel-count" id="countQ6"></div>
   </div>
@@ -4087,6 +4848,7 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
         <div class="contrast-header">
           <div class="contrast-h-title">你的三輪選色</div>
           <div class="contrast-h-sub">每一輪選 2 個顏色，看見你品牌色彩的軌跡</div>
+          <div class="contrast-relation" id="contrastRelation"></div>
         </div>
         <div class="contrast-pair contrast-pair-3">
           <div class="contrast-side">
@@ -4181,13 +4943,14 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
     <div class="reveal-btn-group">
       <!-- 社交鉤：標記閨蜜比比看 -->
       <div class="share-hook">
-        <span>想跟好朋友比比？</span><br>標記她，看你們是不是靈魂搭檔
+        <span>你是哪一種品牌色彩人格？</span><br>標記他，我想知道我們是不是同一掛
       </div>
       <div class="reveal-share-row">
         <button class="share-ig-btn" onclick="shareToIG()"><span class="share-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>IG 限動</button>
         <button class="share-threads-btn" onclick="shareToThreads()"><span class="share-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007C5.965 24 2.616 20.186 2.616 14.676c0-5.268 3.087-9.013 7.816-9.489v3.14c-2.882.476-4.727 2.746-4.727 5.983 0 3.905 2.27 6.38 5.927 6.477-.09-.67-.134-1.373-.134-2.1 0-.295.012-.586.034-.874a5.24 5.24 0 0 1-.744.053c-2.18 0-3.394-1.527-3.394-3.348 0-1.59.888-2.727 2.409-3.093a7.7 7.7 0 0 1 1.663-.183c.333 0 .665.018.99.054V8.23c-.345-.025-.695-.037-1.047-.037-1.456 0-2.772.282-3.842.872V5.88C9.02 5.213 10.59 4.8 12.29 4.8c4.985 0 8.094 3.394 8.094 8.847 0 5.559-3.457 10.353-8.198 10.353zM13.29 8.638c-.406 0-.798.033-1.172.098-1.348.281-2.2 1.212-2.2 2.4 0 1.24.74 2.06 2.11 2.06.195 0 .384-.015.565-.044.07-.495.107-1.01.107-1.54 0-1.07-.09-2.08-.41-2.974zm1.04-.138c.518.977.73 2.12.73 3.266 0 .525-.034 1.04-.1 1.538 1.16-.535 1.87-1.56 1.87-2.973 0-1.048-.494-1.707-1.336-1.88a3.7 3.7 0 0 0-1.164.049z"/></svg></span>Threads</button>
       </div>
-      <button class="reveal-continue-btn" onclick="goToService()">了解 Canva 品牌美感實作諮詢</button>
+
+      <button class="reveal-continue-btn" onclick="goToService()">看看品牌美感整理服務</button>
       <button class="reveal-back-btn" onclick="restartFlow()">重新測一次</button>
     </div>
   </div>
@@ -4217,8 +4980,8 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
       <button class="dl-snap-btn" onclick="downloadSnap()">下載快照圖片</button>
     </div>
     <div class="snap-bridge-block">
-      <p class="snap-bridge-text">想把這組色彩做成專屬你的版面設計？</p>
-      <button class="snap-bridge-btn" onclick="goToService()">Brand Consultation &#8594;</button>
+      <p class="snap-bridge-text">想把這組色彩整理成完整的品牌視覺系統？</p>
+      <button class="snap-bridge-btn" onclick="goToService()">看看品牌美感整理服務 &#8594;</button>
     </div>
     <button class="home-btn" onclick="goHome()">← 重新開始</button>
   </div>
@@ -4230,55 +4993,95 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
 <div class="page" id="pg-portfolio">
   <div class="portfolio-inner">
     <div class="portfolio-eyebrow">Portfolio</div>
-    <h2 class="portfolio-title">品牌美感作品集</h2>
-    <p class="portfolio-subtitle">每一組配色都是一段品牌故事的開端</p>
+    <h2 class="portfolio-title">作品與整理案例</h2>
+    <p class="portfolio-subtitle">我不只做漂亮畫面，更在意一個品牌的色彩、版面與互動體驗，是否能讓人更快理解你、記住你。</p>
 
-    <div class="portfolio-grid">
-      <div class="portfolio-card fadeUp">
-        <div class="portfolio-card-visual">
-          <div class="portfolio-card-swatches">
-            <div class="pf-sw" style="background:linear-gradient(135deg,#C87818,#F0A820)"></div>
-            <div class="pf-sw" style="background:linear-gradient(135deg,#A07040,#C89060)"></div>
-            <div class="pf-sw" style="background:linear-gradient(135deg,#D4A860,#E8C880)"></div>
-          </div>
-        </div>
-        <div class="portfolio-card-body">
-          <div class="portfolio-card-tag">Warm &amp; Refined</div>
-          <h3 class="portfolio-card-name">溫暖精緻型</h3>
-          <p class="portfolio-card-desc">金色為主調，搭配咖啡暖棕，傳達溫暖而專業的品牌氣質。</p>
+    <!-- A. IG 版面整理案例 -->
+    <section class="pf-section">
+      <div class="pf-section-head">
+        <span class="pf-section-tag">A</span>
+        <div>
+          <h3 class="pf-section-title">IG 版面整理案例</h3>
+          <div class="pf-section-sub">整理品牌配色、九宮格節奏、貼文封面與標題層級，讓 IG 版面更一致、更有辨識度。</div>
         </div>
       </div>
-
-      <div class="portfolio-card fadeUp">
-        <div class="portfolio-card-visual">
-          <div class="portfolio-card-swatches">
-            <div class="pf-sw" style="background:linear-gradient(135deg,#5C3D1E,#7A5A38)"></div>
-            <div class="pf-sw" style="background:linear-gradient(135deg,#8B6914,#B8904A)"></div>
-            <div class="pf-sw" style="background:linear-gradient(135deg,#3A2A14,#5C4020)"></div>
-          </div>
+      <article class="pf-case">
+        <div class="pf-case-num">Case 01</div>
+        <h4 class="pf-case-title">身心靈老師 IG 版面整理</h4>
+        <div class="pf-case-field">
+          <div class="pf-case-label">原本狀態</div>
+          <p class="pf-case-text">版面顏色很多，單張都好看，但整體看起來不夠一致。</p>
         </div>
-        <div class="portfolio-card-body">
-          <div class="portfolio-card-tag">Deep &amp; Grounded</div>
-          <h3 class="portfolio-card-name">沉穩知性型</h3>
-          <p class="portfolio-card-desc">以深咖啡與琥珀金為核心，展現內斂知性的品牌個性。</p>
+        <div class="pf-case-field">
+          <div class="pf-case-label">我的整理方向</div>
+          <p class="pf-case-text">保留他的溫柔感，降低色彩雜訊，建立固定主色與標題系統。</p>
+        </div>
+        <div class="pf-case-field">
+          <div class="pf-case-label">調整後效果</div>
+          <p class="pf-case-text">畫面更穩、辨識度提升，也讓新訪客更快理解他的服務。</p>
+        </div>
+        <div class="pf-case-meta">適合的品牌類型：身心靈、療癒、自由工作者</div>
+      </article>
+    </section>
+
+    <!-- B. 品牌配色整理案例 -->
+    <section class="pf-section">
+      <div class="pf-section-head">
+        <span class="pf-section-tag">B</span>
+        <div>
+          <h3 class="pf-section-title">品牌配色整理案例</h3>
+          <div class="pf-section-sub">透過 105 色票系統，整理品牌主色、搭配色、亮點色與記憶色，讓品牌風格更穩定。</div>
         </div>
       </div>
-
-      <div class="portfolio-card fadeUp">
-        <div class="portfolio-card-visual">
-          <div class="portfolio-card-swatches">
-            <div class="pf-sw" style="background:linear-gradient(135deg,#E8C880,#F5DCA0)"></div>
-            <div class="pf-sw" style="background:linear-gradient(135deg,#D4A860,#E0BC78)"></div>
-            <div class="pf-sw" style="background:linear-gradient(135deg,#C09050,#D8A868)"></div>
-          </div>
+      <article class="pf-case">
+        <div class="pf-case-num">Case 02</div>
+        <h4 class="pf-case-title">創作者品牌配色整理</h4>
+        <div class="pf-case-field">
+          <div class="pf-case-label">原本的顏色困擾</div>
+          <p class="pf-case-text">他原本以為自己適合粉色，但用起來總是覺得不夠像自己、客戶也記不住風格。</p>
         </div>
-        <div class="portfolio-card-body">
-          <div class="portfolio-card-tag">Soft &amp; Luminous</div>
-          <h3 class="portfolio-card-name">柔光探索型</h3>
-          <p class="portfolio-card-desc">淺金與蜂蜜色調交織，營造柔和明亮的品牌第一印象。</p>
+        <div class="pf-case-field">
+          <div class="pf-case-label">適合的品牌色彩方向</div>
+          <p class="pf-case-text">經過 105 色票測驗與對談，整理出「柔和但有信任感」的米棕色系——主色 × 搭配色 × 亮點色 × 記憶色 四種角色。</p>
+        </div>
+        <div class="pf-case-field">
+          <div class="pf-case-label">可應用的位置</div>
+          <p class="pf-case-text">IG 貼文封面、限動模板、官網 hero、簡報、Canva 模板——同一套色彩在不同載體上維持一致辨識。</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- C. 互動網站整理案例 -->
+    <section class="pf-section">
+      <div class="pf-section-head">
+        <span class="pf-section-tag">C</span>
+        <div>
+          <h3 class="pf-section-title">互動網站整理案例</h3>
+          <div class="pf-section-sub">協助創作者把服務內容整理成可互動、可分享、可導流的網站體驗，例如測驗網站、服務頁、作品頁。</div>
         </div>
       </div>
-    </div>
+      <article class="pf-case">
+        <div class="pf-case-num">Case 03</div>
+        <h4 class="pf-case-title">品牌色彩測驗網站</h4>
+        <div class="pf-case-field">
+          <div class="pf-case-label">網站目的</div>
+          <p class="pf-case-text">讓潛在客戶先透過測驗認識自己的品牌風格，再進入諮詢服務。</p>
+        </div>
+        <div class="pf-case-field">
+          <div class="pf-case-label">互動設計</div>
+          <p class="pf-case-text">三輪選色 · 品牌人格解析 · 可下載的快照——增加停留時間與分享率。</p>
+        </div>
+        <div class="pf-case-field">
+          <div class="pf-case-label">品牌美感方向</div>
+          <p class="pf-case-text">米白底、咖啡金色、細緻光感、優雅襯線字——保留溫柔奢感，但不過度療癒雞湯。</p>
+        </div>
+        <div class="pf-case-field">
+          <div class="pf-case-label">可以如何導向服務</div>
+          <p class="pf-case-text">測驗結果頁串接「品牌美感整理服務」與分享文案，讓使用者帶著快照進入諮詢，也讓限動上的觀眾看得到入口。</p>
+        </div>
+        <div class="pf-case-meta">你現在體驗的，就是這個作品本身 ✦</div>
+      </article>
+    </section>
 
     <button class="portfolio-back" onclick="goTo('pg-intro')">← 回到首頁</button>
   </div>
@@ -4291,52 +5094,76 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   <div class="svc-inner">
     <div class="hannah-photo-wrap">
       <div class="hannah-photo">
-        <img src="hannah.jpg" alt="品牌美感諮詢師 Hannah Chen 的個人照片" loading="lazy">
+        <img src="hannah.jpg" alt="品牌美感整理師青青的個人照片" loading="lazy">
       </div>
       <div class="hannah-name-tag">青青</div>
     </div>
     <div class="hannah-bio">
-      <div class="hannah-bio-quote">「相信每個人都能活出獨特的自己、找到喜歡的生活方式。」</div>
+      <div class="hannah-bio-quote">「我想做的不是把你包裝成另一個人，<br>而是幫你把原本就有的氣質整理出來，讓它被看見。」</div>
       <div class="bio-tags">
         <div class="bio-tag"><span class="bio-tag-icon">✦</span>水晶飾品設計 · 十年</div>
-        <div class="bio-tag"><span class="bio-tag-icon">✦</span>智堯品牌 Co-founder</div>
-        <div class="bio-tag"><span class="bio-tag-icon">✦</span>IG 視覺規劃 · 排版設計</div>
         <div class="bio-tag"><span class="bio-tag-icon">✦</span>身心靈品牌協作</div>
-        <div class="bio-tag"><span class="bio-tag-icon">✦</span>品牌美感諮詢</div>
+        <div class="bio-tag"><span class="bio-tag-icon">✦</span>IG 版面整理</div>
+        <div class="bio-tag"><span class="bio-tag-icon">✦</span>品牌配色整理</div>
+        <div class="bio-tag"><span class="bio-tag-icon">✦</span>互動網站整理</div>
       </div>
-      <div class="bio-tagline">用質感版面與真誠分享，幫助有故事的你打造品牌氛圍</div>
+      <div class="bio-tagline">用色彩測驗與互動網站，幫創作者整理出更像自己的品牌美感方向</div>
     </div>
     <div style="width:40px;height:1px;background:linear-gradient(to right,transparent,rgba(184,144,74,.3),transparent);margin:8px auto 28px;"></div>
-    <div class="snap-eyebrow">Brand Aesthetics Consultation</div>
-    <div class="snap-title" style="margin-bottom:4px;font-size:1.15rem;">Canva 品牌美感實作諮詢</div>
-    <p class="svc-sub">這一個小時，我們不僅有諮詢，還要實作</p>
+    <div class="snap-eyebrow">Brand Aesthetics Organizing</div>
+    <h2 class="snap-title" style="margin-bottom:6px;font-size:1.18rem;">品牌美感整理服務</h2>
+    <p class="svc-sub">不是把版面變漂亮而已，而是幫你把品牌氣質整理成一套可以被使用、被延伸、被記住的視覺系統。</p>
+
+    <!-- ═══ 我可以幫你整理的三件事 ═══ -->
+    <section class="svc-three" aria-label="我可以幫你整理的三件事">
+      <div class="svc-three-head">
+        <div class="svc-three-eyebrow">Three Things I Help You Organize</div>
+        <h3 class="svc-three-title">我可以幫你整理的三件事</h3>
+        <p class="svc-three-intro">你可能不是不會做內容，而是品牌美感還沒有被整理成一套穩定的系統。我會從色彩、版面、內容節奏與互動體驗中，幫你找出更清楚、更像你的品牌表達方式。</p>
+      </div>
+      <article class="svc-card">
+        <div class="svc-card-num">01</div>
+        <h4 class="svc-card-title">IG 版面整理</h4>
+        <p class="svc-card-desc">適合覺得 IG 每張圖都不差，但整體看起來不夠一致的人。我會幫你看品牌配色、九宮格節奏、標題層級與貼文封面，整理出更穩定的視覺方向。</p>
+        <a class="svc-card-cta" href="#booking">整理我的 IG 版面 →</a>
+      </article>
+      <article class="svc-card">
+        <div class="svc-card-num">02</div>
+        <h4 class="svc-card-title">品牌配色整理</h4>
+        <p class="svc-card-desc">適合品牌色一直換、風格容易跑掉，或不知道什麼顏色才像自己的人。我會用 105 色票系統，幫你找出主色、搭配色、亮點色與記憶色。</p>
+        <a class="svc-card-cta" href="#booking">找到我的品牌色 →</a>
+      </article>
+      <article class="svc-card">
+        <div class="svc-card-num">03</div>
+        <h4 class="svc-card-title">互動網站整理</h4>
+        <p class="svc-card-desc">適合想做測驗網站、服務頁或作品頁，但不知道內容怎麼安排、視覺怎麼統一的人。我會協助你整理網站架構、互動流程與品牌美感方向，讓網站不只是展示，而是能被體驗、被分享。</p>
+        <a class="svc-card-cta" href="#booking">整理我的互動網站 →</a>
+      </article>
+    </section>
+
+    <!-- 我可以協助你 -->
+    <h3 class="svc-section-h">我可以協助你</h3>
     <ul class="svc-check-list">
-      <li>
-        <span class="svc-check">✦</span>
-        <span><strong>色票對談</strong> — 用色彩釐清品牌心態，找到你真正的視覺方向</span>
-      </li>
-      <li>
-        <span class="svc-check">✦</span>
-        <span><strong>實際優化</strong> — 當場改版你的 Canva 版面，親眼看到改版前後的差異</span>
-      </li>
-      <li>
-        <span class="svc-check">✦</span>
-        <span><strong>工具清單</strong> — 字體、圖庫、AI 工具推薦，全部整理好直接給你帶走</span>
-      </li>
-      <li>
-        <span class="svc-check">✦</span>
-        <span><strong>品牌報告</strong> — 一份專屬你的品牌美感分析，諮詢結束後隨時可回顧</span>
-      </li>
+      <li><span class="svc-check">✦</span><span>整理 IG 版面視覺方向</span></li>
+      <li><span class="svc-check">✦</span><span>分析品牌配色是否一致</span></li>
+      <li><span class="svc-check">✦</span><span>建議貼文封面與九宮格節奏</span></li>
+      <li><span class="svc-check">✦</span><span>規劃互動網站內容架構</span></li>
+      <li><span class="svc-check">✦</span><span>協助 Canva / vibecoding 美感調整</span></li>
+      <li><span class="svc-check">✦</span><span>給出可執行的修改建議</span></li>
     </ul>
-    <div class="svc-for-who">
-      <div class="svc-for-who-title">適合你嗎？</div>
-      <ul class="svc-for-who-list">
-        <li>剛開始經營 IG，不知道品牌風格怎麼定</li>
-        <li>版面做了很久，但就是覺得不好看、不夠專業</li>
-        <li>想讓品牌看起來更有質感，吸引對的客戶</li>
+
+    <!-- 目前我不提供（溫和清楚地畫範圍） -->
+    <div class="svc-not-offer">
+      <div class="svc-not-offer-title">目前我不提供</div>
+      <ul class="svc-not-offer-list">
+        <li>Logo 設計</li>
+        <li>完整 CIS 品牌識別</li>
+        <li>廣告投放策略</li>
+        <li>大型企業品牌策略案</li>
+        <li>大型客製化網站工程開發</li>
       </ul>
+      <p class="svc-not-offer-note">我目前更擅長的是協助創作者與小品牌，把現有的品牌美感、IG 版面與網站內容整理得更清楚、更一致、更能被記住。</p>
     </div>
-    <div class="svc-addon">＋ 可加購專屬質感模板製作</div>
 
     <div class="social-proof">
       <div class="social-proof-title">What They Say</div>
@@ -4354,10 +5181,10 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
       </div>
     </div>
 
-    <div class="price-card">
+    <div class="price-card" id="booking">
       <div class="price-card-top">
         <div class="price-left">
-          <div class="price-label">體驗服務</div>
+          <div class="price-label">整理諮詢入門體驗</div>
           <div><span class="price-value">800</span><span class="price-unit"> / 1hr</span></div>
         </div>
         <div class="price-right">
@@ -4368,12 +5195,12 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
           </div>
         </div>
       </div>
-      <div class="price-includes">諮詢包含：
+      <div class="price-includes">這一個小時，我們會：
         <ul class="price-includes-list">
-          <li>品牌色票分析與對談</li>
-          <li>Canva 版面實作優化</li>
-          <li>字體・圖庫・AI 工具清單</li>
-          <li>專屬品牌美感分析報告</li>
+          <li>用色票對談，釐清你的品牌氣質</li>
+          <li>看你現在的 IG 版面 / 網站 / 配色</li>
+          <li>給出可立即執行的整理方向</li>
+          <li>留下一份簡單的整理筆記</li>
         </ul>
       </div>
     </div>
@@ -4533,13 +5360,13 @@ const BRAND_COLORS = COLOR_ORDER.map(id=>CARDS.find(c=>c.id===id)).filter(Boolea
 const QUESTIONS = [
   // Q1 直覺 (25%)
   { weight: 0.25, options: [
-    { text:'她有溫度，讓人想靠近',           sub:'像走進一間有人味的小店',      tones:{warm:1.0, gold:0.3} },
-    { text:'她很有品味，每個細節都精煉',   sub:'像精挑過的選品店',            tones:{gold:1.0, neutral:0.3} },
-    { text:'她很真實，不演不裝',           sub:'像在跟一個老朋友說話',         tones:{green:1.0, warm:0.3} },
-    { text:'她說話有重量，看得出專業',     sub:'像資深前輩的氣場',            tones:{teal:1.0, blue:0.3} },
-    { text:'她讓人覺得很安心、可信',       sub:'像可以託付重要事的對象',       tones:{blue:1.0, teal:0.3} },
-    { text:'她和別人不一樣，記得住',       sub:'像一首旋律突然冒出來',         tones:{purple:1.0, warm:0.3} },
-    { text:'她安靜，但有存在感',           sub:'像留白本身在說話',            tones:{neutral:1.0, blue:0.3} }
+    { text:'他有溫度，讓人想靠近',           sub:'像走進一間有人味的小店',      tones:{warm:1.0, gold:0.3} },
+    { text:'他很有品味，每個細節都精煉',   sub:'像精挑過的選品店',            tones:{gold:1.0, neutral:0.3} },
+    { text:'他很真實，不演不裝',           sub:'像在跟一個老朋友說話',         tones:{green:1.0, warm:0.3} },
+    { text:'他說話有重量，看得出專業',     sub:'像資深前輩的氣場',            tones:{teal:1.0, blue:0.3} },
+    { text:'他讓人覺得很安心、可信',       sub:'像可以託付重要事的對象',       tones:{blue:1.0, teal:0.3} },
+    { text:'他和別人不一樣，記得住',       sub:'像一首旋律突然冒出來',         tones:{purple:1.0, warm:0.3} },
+    { text:'他安靜，但有存在感',           sub:'像留白本身在說話',            tones:{neutral:1.0, blue:0.3} }
   ]},
   // Q2 排斥 (15%) — 反向：選的代表害怕，加分到對立 tone
   { weight: 0.15, options: [
@@ -4561,13 +5388,13 @@ const QUESTIONS = [
   ]},
   // Q4 記憶 (20%)
   { weight: 0.20, options: [
-    { text:'「她真的有溫度」',       sub:'被靠近、被看見的安心感',      tones:{warm:1.0, gold:0.3} },
-    { text:'「她超有品味」',         sub:'每次看到她的東西都想學',      tones:{gold:1.0, neutral:0.3} },
-    { text:'「她很真實，沒在演」',   sub:'就是這個人本來的樣子',        tones:{green:1.0, warm:0.3} },
-    { text:'「她說話有重量」',       sub:'每句話都讓人想記下來',        tones:{teal:1.0, blue:0.3} },
-    { text:'「她讓我安心」',         sub:'交給她的事都不用擔心',        tones:{blue:1.0, neutral:0.3} },
-    { text:'「她和別人不一樣」',     sub:'我認得出她的風格',            tones:{purple:1.0, warm:0.3} },
-    { text:'「她的留白很美」',       sub:'說出來的少，傳達的多',        tones:{neutral:1.0, purple:0.3} }
+    { text:'「他真的有溫度」',       sub:'被靠近、被看見的安心感',      tones:{warm:1.0, gold:0.3} },
+    { text:'「他超有品味」',         sub:'每次看到他的東西都想學',      tones:{gold:1.0, neutral:0.3} },
+    { text:'「他很真實，沒在演」',   sub:'就是這個人本來的樣子',        tones:{green:1.0, warm:0.3} },
+    { text:'「他說話有重量」',       sub:'每句話都讓人想記下來',        tones:{teal:1.0, blue:0.3} },
+    { text:'「他讓我安心」',         sub:'交給他的事都不用擔心',        tones:{blue:1.0, neutral:0.3} },
+    { text:'「他和別人不一樣」',     sub:'我認得出他的風格',            tones:{purple:1.0, warm:0.3} },
+    { text:'「他的留白很美」',       sub:'說出來的少，傳達的多',        tones:{neutral:1.0, purple:0.3} }
   ]}
 ];
 
@@ -4686,6 +5513,33 @@ function goTo(id){
   if(id==='pg-service'){
     document.getElementById('spotsNum').textContent = SPOTS_REMAINING;
   }
+  // 動畫重啟：SPA 模式下這些頁面從一開始就在 DOM，CSS 動畫早就播完了。
+  // 進入時把元素的 animation 暫時清掉、強制重排、再還原，動畫就會從頭再跑一次。
+  if(id==='pg-intro' || id==='pg-intro-transition'){
+    const _pg = document.getElementById(id);
+    const _sel = id==='pg-intro'
+      ? '.intro-eye,.intro-title,.intro-themes .intro-theme,.intro-sub,.intro-palette,.intro-quote,.intro-flow-hint,.intro-cta,.intro-secondary-link,.intro-about-link,.intro-price'
+      : '.trans-eyebrow,.trans-title,.trans-subtitle,.trans-hook,.trans-cta';
+    _pg.querySelectorAll(_sel).forEach(function(el){
+      el.style.animation = 'none';
+      void el.offsetWidth;
+      el.style.animation = '';
+    });
+    // 過渡頁的 .trans-cards 容器 + .trans-cta 按鈕都有 ::before 光暈（pseudo），
+    // 無法用 inline-animation 重置 → 直接 cloneNode 整個元素來替換，動畫自然從頭跑
+    if(id==='pg-intro-transition'){
+      const _wrap = _pg.querySelector('.trans-cards');
+      if(_wrap){
+        const _clone = _wrap.cloneNode(true);
+        _wrap.parentNode.replaceChild(_clone, _wrap);
+      }
+      const _cta = _pg.querySelector('.trans-cta');
+      if(_cta){
+        const _ctaClone = _cta.cloneNode(true);
+        _cta.parentNode.replaceChild(_ctaClone, _cta);
+      }
+    }
+  }
 }
 
 function navBack(){
@@ -4800,8 +5654,8 @@ const PERSONALITY_SYMBOLS = {
     '<path class="stroke" d="M12 10.2 C 14.3 10.6 15.8 9 15.6 6.5 C 13.6 7.1 12.3 8.4 12 10.2 Z"/>'+
     '</svg>',
   teal: '<svg viewBox="0 0 24 24" aria-hidden="true">'+
-    '<path class="stroke" d="M3 12 C 7 7.8 17 7.8 21 12 C 17 16.2 7 16.2 3 12 Z"/>'+
-    '<circle class="filled" cx="12" cy="12" r="2.1"/>'+
+    '<path class="stroke" d="M12 3 C 8.4 7.8 7 11.4 9 15.4 C 10.5 18.4 13.5 18.4 15 15.4 C 17 11.4 15.6 7.8 12 3 Z"/>'+
+    '<circle class="filled" cx="12" cy="13" r="1.1"/>'+
     '</svg>',
   blue: '<svg viewBox="0 0 24 24" aria-hidden="true">'+
     '<line class="stroke" x1="2.5" y1="17" x2="21.5" y2="17"/>'+
@@ -4825,7 +5679,8 @@ function renderRevealPage(){
       var _sel = '.reveal-eyebrow,.reveal-title,.reveal-sub,.reveal-line,.reveal-symbol,'+
         '.reveal-type-sub,.reveal-tagline,.reveal-rarity,.section-divider,.spectrum-block,'+
         '.spectrum-labels span,.dist-block,.answer-trace,.contrast-block,.contrast-eyebrow,'+
-        '.contrast-tone,.contrast-insight,.contrast-h-title,.contrast-h-sub,.chapter-divider,'+
+        '.contrast-tone,.contrast-insight,.contrast-h-title,.contrast-h-sub,.contrast-relation,'+
+        '.chapter-divider,'+
         '.reveal-guidance,.palette-divider,.palette-sub-title,.palette-sub-caption,.palette-note,'+
         '.reveal-hook';
       _pgr.querySelectorAll(_sel).forEach(function(el){
@@ -4834,13 +5689,14 @@ function renderRevealPage(){
         el.style.animation = '';
       });
     })();
-    // 下方面板先暫停；標題與上方文字出現後（1.9s）才解除，讓版面依序動畫
+    // 下方白色板塊：等上方所有 hero 內容（符號／名字／金句／稀有度／飾紋）都浮現完
+    // 才開始淡入，並在板塊浮現後再解除內容的動畫暫停，確保結果頁完全由上往下出現
     (function(){
       var _db = document.querySelector('.reveal-diag-block');
       if(_db){
         _db.classList.remove('diag-go');
         void _db.offsetWidth;
-        setTimeout(function(){ _db.classList.add('diag-go'); }, 1900);
+        setTimeout(function(){ _db.classList.add('diag-go'); }, 3700);
       }
     })();
     const r = determineResult(answers);
@@ -4862,7 +5718,8 @@ function renderRevealPage(){
     const tn = document.getElementById('revealTypeName');
     if(tn){
       // 只顯示主型，不再並列次型，畫面才乾淨
-      tn.innerHTML = '<span class="t-name">' + spanChars(p1.name, 0.5) + '</span>';
+      // 揭曉感：符號先「畫」出來，名字才一個字一個字浮現（base 1.9s ≈ 符號描線完成後）
+      tn.innerHTML = '<span class="t-name">' + spanChars(p1.name, 1.9) + '</span>';
     }
 
     // 信心度詞彙：寫成看得懂的中文短語
@@ -4894,7 +5751,7 @@ function renderRevealPage(){
         setTimeout(function(){
           const numEl = document.getElementById('rarityNum');
           if(numEl) animateNumber(numEl, personRarity, 1400);
-        }, 1900);
+        }, 3100);
       } else {
         rarityEl.innerHTML = '';
       }
@@ -4946,10 +5803,18 @@ function renderRevealPage(){
       }, 700);
     }
 
-    // 答案軌跡：6 個切面中有 X 個指向主型（含 Q5 當下 + Q6 期望各算一個）
+    // 答案軌跡：7 個切面（直覺/排斥/語感/記憶 + 三輪選色）有幾個指向主型——把推導攤開來看
     const at = document.getElementById('answerTrace');
     if(at){
-      at.innerHTML = '你的 7 個切面中，有 <strong>'+r.traceCount+'</strong> 個指向「'+p1.name+'」';
+      const slices = r.traceSlices || [];
+      const dots = slices.map(function(on, i){
+        return '<span class="trace-dot ' + (on ? 'on' : 'off') + (i === 4 ? ' grp' : '') +
+          '" style="--ti:' + i + '"></span>';
+      }).join('');
+      at.innerHTML =
+        '<div class="trace-viz">' + dots + '</div>' +
+        '<div class="trace-line">你的 7 個切面，有 <strong>' + r.traceCount +
+        '</strong> 個指向「' + p1.name + '」</div>';
     }
 
     // 三輪選色對照：現在的你 / 品牌現狀 / 品牌方向
@@ -4977,6 +5842,14 @@ function renderRevealPage(){
       if(_t3El) _t3El.textContent = TONE_FAMILY[contrast.t3] || contrast.t3;
       const insightEl = document.getElementById('contrastInsight');
       if(insightEl) insightEl.textContent = contrast.transition;
+      // 三輪一致性徽章：把「一致 / 演進 / 轉向」框成一種品牌狀態，附上相對佔比
+      const relEl = document.getElementById('contrastRelation');
+      if(relEl){
+        const relInfo = CONTRAST_RARITY[contrast.category] || CONTRAST_RARITY.evolving;
+        relEl.className = 'contrast-relation ' + contrast.category;
+        relEl.innerHTML = '三輪一致性 · ' + relInfo.label +
+          '<span class="rel-rarity">約 ' + relInfo.rarity + '% 落在這裡</span>';
+      }
     }
 
     // 敘事
@@ -5039,7 +5912,16 @@ function renderRevealPage(){
     }
 
     const rh = document.getElementById('revealHook');
-    if(rh) rh.textContent = '色彩只是入口，把氣質變成「看得見」的視覺語言——這件事，光靠色票做不到。';
+    if(rh) rh.textContent = '色彩只是入口，把氣質整理成「看得見」的視覺語言——這件事，光靠色票做不到。';
+
+    // 你的品牌色彩提醒：三句輪替的金句（隨機挑一句，每次進結果頁可能不同）
+    const reminders = [
+      '你的品牌不是需要更多顏色，<br>而是需要更穩定的視覺記憶點。',
+      '你適合的不是最流行的顏色，<br>而是能讓人一眼感覺到你的顏色。',
+      '品牌色不是選漂亮顏色，<br>而是判斷這個顏色能不能讓品牌看起來像你。'
+    ];
+    const remEl = document.getElementById('revealReminderText');
+    if(remEl) remEl.innerHTML = reminders[Math.floor(Math.random()*reminders.length)];
 
     // 動畫：分次浮現（敘事段落改用 CSS 動畫，與面板暫停機制同步，不再用 JS 設 opacity）
     requestAnimationFrame(function(){
@@ -5284,10 +6166,8 @@ const PERSONALITY = {
     tagline:'我說的不多，但每句都有重量',
     rarity:11,
     vibe:'你看起來安靜，但洞察的深度超乎想像——乾淨的穿透力是你的武器',
-    strength:'專業不是表演，是「她真的懂」的直覺。你的話有重量，會在關鍵時刻被想起',
-    guidance:[
-      {label:'定位', text:'別怕收費高一點。你的洞察是稀缺資源，定價要對得起價值。'}
-    ],
+    strength:'專業不是表演，是「他真的懂」的直覺。你的話有重量，會在關鍵時刻被想起',
+    guidance:[],
     blessing:'你的安靜不是冷漠，是看得太清楚不忍心多說。在話太多的世界，你的克制本身就是答案——而會懂的人，會自己找上來。'
   },
   blue:{
@@ -5304,10 +6184,8 @@ const PERSONALITY = {
     tagline:'別人在跟風，我在開路',
     rarity:9,
     vibe:'你讓人忍不住多看兩眼。不走常規，因為常規對你沒意義',
-    strength:'你天生不該模仿別人。「只有她才有」的氣質，就是你的競爭力',
-    guidance:[
-      {label:'個性', text:'別把你的「奇怪」磨平了。那是你最大的記憶點，也是別人複製不來的護城河。'}
-    ],
+    strength:'你天生不該模仿別人。「只有他才有」的氣質，就是你的競爭力',
+    guidance:[],
     blessing:'你不是要做給所有人看的人，你是要做給「懂的人」看的人。你的獨特不是缺陷，是天賦——它會自己找到欣賞你的人。'
   },
   neutral:{
@@ -5316,9 +6194,7 @@ const PERSONALITY = {
     rarity:13,
     vibe:'你懂什麼時候不說話。留白不是空白，是給人感受的餘韻',
     strength:'在大家搶注意力時，你的安靜反而讓人停下來——克制本身就是力量',
-    guidance:[
-      {label:'美學', text:'克制是你的核心競爭力。「應該再多說一點」的誘惑請忽略，少即是你。'}
-    ],
+    guidance:[],
     blessing:'你的留白不是不說，是讓對方有空間想念你。在資訊爆炸的時代，你給人「喘息」的能力，本身就是稀缺價值——別把這個本事輕易拿掉。'
   }
 };
@@ -5494,19 +6370,24 @@ function analyzeThreeRounds(ans){
   const sim23 = roundDist(pr2,pr3) < TH;
   const sim13 = roundDist(pr1,pr3) < TH;
   const simCount = [sim12,sim23,sim13].filter(Boolean).length;
-  let transition;
+  let transition, category;
   if(simCount >= 2){
+    category = 'aligned';
     transition = '三組色彩走在同一條路上，你的品牌方向很清晰，接下來是把這份一致做得更到位。';
   } else if(sim13){
+    category = 'evolving';
     transition = '你的內在和理想方向是一致的，品牌正準備迎來一次視覺蛻變。';
   } else if(sim12){
+    category = 'evolving';
     transition = '你和品牌現狀是合拍的，而你心裡已經看到一個更大的可能——這個渴望，就是品牌進化的起點。';
   } else if(sim23){
+    category = 'evolving';
     transition = '品牌正朝著自己的方向前進，而你的內在能量是讓它更有層次的關鍵。';
   } else {
+    category = 'pivoting';
     transition = '三組色彩各自帶著不同的故事——這種豐富的張力，正是打造獨特品牌最好的素材。';
   }
-  return { t1, t2, t3, sim12, sim23, sim13, simCount, transition };
+  return { t1, t2, t3, sim12, sim23, sim13, simCount, category, transition };
 }
 
 function determineResult(ans){
@@ -5524,11 +6405,34 @@ function determineResult(ans){
   if(gap > 0.30) confidence = 'clear';
   else if(gap > 0.10) confidence = 'mixed';
   else confidence = 'transitional';
+  const traceSlices = getTraceSlices(ans, mainTone);
   return {
     scores, sorted, mainTone, secondaryTone,
     mainPct, secondaryPct, gap, confidence,
-    traceCount: countAnswerTrace(ans, mainTone)
+    traceSlices,
+    traceCount: traceSlices.filter(Boolean).length
   };
+}
+
+// 7 個切面（直覺/排斥/語感/記憶 + 現在的你/品牌現狀/品牌方向）各自是否指向主型
+function getTraceSlices(ans, target){
+  const slices = [];
+  for(let qi = 0; qi < 4; qi++){
+    const a = ans['q'+(qi+1)];
+    if(a == null){ slices.push(false); continue; }
+    const opt = QUESTIONS[qi].options[a];
+    if(!opt){ slices.push(false); continue; }
+    const top = Object.entries(opt.tones).sort((a,b)=>b[1]-a[1])[0];
+    slices.push(!!(top && top[0] === target));
+  }
+  ['q5','q6','q7'].forEach(key => {
+    if(ans[key] && ans[key].length > 0){
+      slices.push(topToneFrom(aggregateColorAlignment(ans[key])) === target);
+    } else {
+      slices.push(false);
+    }
+  });
+  return slices;
 }
 
 function countAnswerTrace(ans, target){
@@ -5646,7 +6550,7 @@ function generateDiagnosis(sel){
     teal:{
       name:'透澈洞察者',
       vibe:'你的品牌看起來很安靜，但洞察的深度超乎想像。乾淨的穿透力是你最大的武器',
-      strength:'專業感不是表演出來的，而是那種「她真的懂」的直覺。你說的每句話都有重量，受眾在關鍵時刻會最先想到你'
+      strength:'專業感不是表演出來的，而是那種「他真的懂」的直覺。你說的每句話都有重量，受眾在關鍵時刻會最先想到你'
     },
     blue:{
       name:'沉靜信任者',
@@ -5656,7 +6560,7 @@ function generateDiagnosis(sel){
     purple:{
       name:'獨創敘述者',
       vibe:'你的品牌讓人忍不住多看兩眼。你不走常規的路，因為常規對你沒意義。這就是你的魅力所在',
-      strength:'你天生不該模仿別人。那股「只有她才有」的氣質，正是你最強的競爭力。受眾被你吸引，是因為你敢不同'
+      strength:'你天生不該模仿別人。那股「只有他才有」的氣質，正是你最強的競爭力。受眾被你吸引，是因為你敢不同'
     },
     neutral:{
       name:'意境留白者',
@@ -6036,7 +6940,7 @@ async function shareStory(){
   // Watermark
   ctx.font='300 24px "Noto Serif TC",serif';
   ctx.fillStyle='rgba(154,138,118,.45)';
-  ctx.fillText('Hannah Chen · 品牌美感諮詢', W/2, H-140);
+  ctx.fillText('青青 · 品牌美感整理師', W/2, H-140);
   ctx.font='300 22px "EB Garamond",serif';
   ctx.fillStyle='rgba(184,144,74,.55)';
   ctx.fillText('@hannahchen0505949', W/2, H-100);
@@ -6077,6 +6981,34 @@ function shareToIG(){
   shareStory();
 }
 
+// 一鍵複製分享文字（三段提醒文字 → 複製到剪貼簿 + 按鈕回饋）
+function copyShareText(textId, btn){
+  const el = document.getElementById(textId);
+  if(!el) return;
+  const text = el.textContent.trim();
+  const lbl = btn?.querySelector('span');
+  const original = lbl ? lbl.textContent : '複製';
+  const done = function(){
+    if(btn){
+      btn.classList.add('copied');
+      if(lbl) lbl.textContent = '已複製';
+      setTimeout(function(){
+        btn.classList.remove('copied');
+        if(lbl) lbl.textContent = original;
+      }, 2200);
+    }
+  };
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done).catch(function(){
+      showToast('文字已顯示，請手動複製');
+      done();
+    });
+  } else {
+    showToast('文字已顯示，請手動複製');
+    done();
+  }
+}
+
 function copyTagline(){
   const d = window._lastDiag || {};
   const name = d.mainName || d.typeName || '';
@@ -6113,8 +7045,10 @@ function shareToThreads(){
   var pctLine = diag.mainPct ? ('（'+diag.confidenceLabel+' · '+diag.mainPct+'% · 稀有度 '+(diag.rarity||'')+'%）') : '';
   var text='我是「'+typeName+'」'+pctLine+'\n';
   if(tagline){ text += '— ' + tagline + '\n'; }
-  text+='\n想知道你是哪一型？\n';
-  text+='免費品牌色彩光譜測驗 → @hannahchen0505949';
+  text+='\n你是哪一種品牌色彩人格？\n';
+  text+='我想知道我們是不是同一掛。\n\n';
+  text+='測你的品牌色彩人格｜青青品牌美感測驗\n';
+  text+='→ @hannahchen0505949';
   if(navigator.clipboard&&navigator.clipboard.writeText){
     navigator.clipboard.writeText(text).then(function(){
       showToast('文案已複製，正在開啟 Threads...');
@@ -6161,7 +7095,7 @@ async function downloadSnap(){
   ctx.textAlign='center';
   ctx.font='300 28px "EB Garamond",serif';
   ctx.fillStyle='rgba(184,144,74,0.6)';
-  ctx.fillText('BRAND COLOR SNAPSHOT · HANNAH CHEN', W/2, 80);
+  ctx.fillText('測你的品牌色彩人格 · 青青品牌美感測驗', W/2, 80);
 
   ctx.font='400 72px "Noto Serif TC",serif';
   ctx.fillStyle='rgba(42,28,14,0.86)';
@@ -6266,7 +7200,7 @@ async function downloadSnap(){
   ctx.fillText(`${now.getFullYear()} · ${String(now.getMonth()+1).padStart(2,'0')}`, W/2, divY+44);
   ctx.font='300 20px "Noto Serif TC",serif';
   ctx.fillStyle='rgba(154,138,118,0.32)';
-  ctx.fillText('品牌美感諮詢 · Hannah Chen · @hannahchen0505949', W/2, divY+80);
+  ctx.fillText('青青 · 品牌美感諮詢 · @hannahchen0505949', W/2, divY+80);
 
   // Personality type name
   const snapDiag=window._lastDiag||{};
@@ -6359,27 +7293,59 @@ document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){
     var modal=document.getElementById('aboutModal');
     if(modal&&modal.classList.contains('visible')) toggleAboutModal();
+    var drawer=document.getElementById('navDrawer');
+    if(drawer&&drawer.classList.contains('open')) toggleNavMenu();
   }
 });
+
+// ═══════════════════════════════════════
+// 漢堡選單抽屜
+// ═══════════════════════════════════════
+function toggleNavMenu(){
+  const drawer = document.getElementById('navDrawer');
+  const overlay = document.getElementById('navOverlay');
+  const btn = document.getElementById('navMenuBtn');
+  if(!drawer || !overlay) return;
+  const isOpen = drawer.classList.contains('open');
+  if(isOpen){
+    drawer.classList.remove('open');
+    overlay.classList.remove('visible');
+    btn?.classList.remove('open');
+    btn?.setAttribute('aria-expanded','false');
+    drawer.setAttribute('aria-hidden','true');
+    document.body.classList.remove('nav-drawer-open');
+  } else {
+    drawer.classList.add('open');
+    overlay.classList.add('visible');
+    btn?.classList.add('open');
+    btn?.setAttribute('aria-expanded','true');
+    drawer.setAttribute('aria-hidden','false');
+    document.body.classList.add('nav-drawer-open');
+  }
+}
+// 抽屜內點選後，先收回再執行動作（避免動畫被打斷）
+function closeDrawerThen(fn){
+  toggleNavMenu();
+  setTimeout(function(){ if(typeof fn === 'function') fn(); }, 240);
+}
 </script>
 
 <!-- ABOUT MODAL -->
 <div class="about-modal-overlay" id="aboutOverlay" onclick="toggleAboutModal()"></div>
-<div class="about-modal" id="aboutModal" role="dialog" aria-modal="true" aria-label="關於">
+<div class="about-modal" id="aboutModal" role="dialog" aria-modal="true" aria-label="關於青青">
   <button class="about-modal-close" onclick="toggleAboutModal()" aria-label="關閉">&times;</button>
   <div class="about-modal-header">
-    <div class="about-modal-title">Hannah Chen</div>
-    <div class="about-modal-subtitle">Brand Aesthetics Consultant</div>
+    <div class="about-modal-title">青青</div>
+    <div class="about-modal-subtitle">品牌美感整理師</div>
+    <p class="about-modal-positioning">幫創作者把散掉的品牌美感，<br>整理成清楚、好看、能被記住的內容體驗。</p>
   </div>
   <div class="about-modal-body">
-    <p class="about-modal-intro">我是青青，一位品牌美感顧問。<br>我相信每個人的品牌都有自己的色彩語言，<br>我的工作是幫你找到它、說出它。</p>
-    <ul class="about-modal-services">
-      <li><span class="svc-icon" style="background:linear-gradient(135deg,#B8904A,#D4A860)"></span>品牌色彩探索與定調</li>
-      <li><span class="svc-icon" style="background:linear-gradient(135deg,#8B6914,#A07A20)"></span>Canva 品牌模板設計</li>
-      <li><span class="svc-icon" style="background:linear-gradient(135deg,#C87818,#E09030)"></span>品牌視覺一致性健檢</li>
-    </ul>
+    <p class="about-modal-intro">曾做十年水晶飾品設計，也長期與身心靈老師、自由工作者與個人品牌合作。我擅長把一個人的氣質、故事與服務，整理成看得懂、記得住，也能用在 IG 版面、網站與內容上的視覺語言。</p>
+    <p class="about-modal-intro">對我來說，品牌色不是選一個漂亮顏色而已。它更像是一種辨識度——讓別人一眼感覺到你是誰、你適合服務誰，以及你的品牌為什麼值得被信任。</p>
+    <p class="about-modal-intro">現在我透過 <strong>IG 版面整理</strong>、<strong>品牌配色整理</strong> 與 <strong>互動網站整理</strong>，協助創作者與小品牌找到更像自己的品牌美感方向。</p>
+    <p class="about-modal-closing">我想做的不是把你包裝成另一個人，<br>而是幫你把原本就有的氣質整理出來，讓它被看見。</p>
   </div>
-  <button class="about-modal-cta" onclick="toggleAboutModal();goToService()">預約品牌美感諮詢</button>
+  <button class="about-modal-cta" onclick="toggleAboutModal();goToService()">看看品牌美感整理服務</button>
 </div>
 
 </body>
