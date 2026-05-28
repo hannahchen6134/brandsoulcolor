@@ -4602,14 +4602,17 @@ body.nav-drawer-open{ overflow: hidden; }
   width:fit-content;min-width:210px;max-width:min(100%,300px);
   margin-left:auto;margin-right:auto;
   font-family:'Noto Serif TC',serif;font-size:.72rem;
-  letter-spacing:.12em;color:#fff9ee;min-height:42px;
-  background:linear-gradient(135deg,#6f4828 0%,#4a301c 58%,#7d592e 100%);
-  border:1px solid rgba(190,146,78,.58);
+  letter-spacing:.13em;color:#fffaf0;min-height:42px;
+  text-decoration:none;
+  background:
+    radial-gradient(circle at 28% 18%, rgba(255,240,203,.5), transparent 38%),
+    linear-gradient(135deg,#e6aa6d 0%,#d68c50 52%,#efbd7a 100%);
+  border:1px solid rgba(218,151,82,.38);
   padding:10px 26px 11px;border-radius:60px;cursor:pointer;
-  box-shadow:0 14px 28px rgba(76,48,26,.2),0 2px 8px rgba(76,48,26,.12),inset 0 1px 0 rgba(255,255,255,.16);
+  box-shadow:0 12px 26px rgba(188,112,55,.15),0 0 28px rgba(255,215,146,.24),inset 0 1px 0 rgba(255,255,255,.42);
   transition:background .28s ease,border-color .28s ease,box-shadow .28s ease,transform .18s ease,color .28s ease;
 }
-@media(hover:hover){.portfolio-cta-primary:hover{color:#fffdf6;background:linear-gradient(135deg,#7a522f 0%,#422919 58%,#8a6638 100%);border-color:rgba(206,165,96,.72);transform:translateY(-1px);box-shadow:0 17px 34px rgba(76,48,26,.25),0 2px 8px rgba(76,48,26,.15),inset 0 1px 0 rgba(255,255,255,.22)}}
+@media(hover:hover){.portfolio-cta-primary:hover{color:#fffdf6;background:radial-gradient(circle at 28% 18%, rgba(255,244,211,.6), transparent 38%),linear-gradient(135deg,#edb378 0%,#dc955a 52%,#f2c486 100%);border-color:rgba(224,160,92,.5);transform:translateY(-1px);box-shadow:0 15px 30px rgba(188,112,55,.18),0 0 38px rgba(255,219,154,.32),inset 0 1px 0 rgba(255,255,255,.5)}}
 .portfolio-cta-primary:active{transform:scale(.98)}
 
 /* ── VIBECODING 作品集（C 區下方的可點卡片牆） ── */
@@ -6144,7 +6147,7 @@ body.nav-drawer-open{ overflow: hidden; }
 
     <div class="vibe-scroll-hint"><span class="hint-arrow left">←</span> 左右滑動瀏覽更多 <span class="hint-arrow right">→</span></div>
 
-    <button class="portfolio-cta-primary" style="margin-top:24px;" onclick="goToService()">預約 IG 整理 →</button>
+    <a class="portfolio-cta-primary" style="margin-top:24px;" href="https://www.instagram.com/hannahchen0505949/" target="_blank" rel="noopener">聯繫青青 →</a>
   </div>
 </div>
 
@@ -6160,7 +6163,7 @@ body.nav-drawer-open{ overflow: hidden; }
     <div class="vibe-grid">
       <a class="vibe-card" href="https://hannahchen6134.github.io/soulcolor/" target="_blank" rel="noopener">
         <div class="vibe-thumb">
-          <img src="vibe-01-soulcolor.png?v=20260528-2" alt="初心色譜 · Soul Color">
+          <img src="site-01-soulcolor.png?v=20260528-3" alt="初心色譜 · Soul Color 網站 UI 截圖">
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">初心色譜 · Soul Color</h5>
@@ -6171,7 +6174,7 @@ body.nav-drawer-open{ overflow: hidden; }
 
       <a class="vibe-card" href="https://hannahchen6134.github.io/cat/" target="_blank" rel="noopener">
         <div class="vibe-thumb">
-          <img src="vibe-02-detector.png?v=20260528-2" alt="初心色譜分析器 · Soul Color Analyzer">
+          <img src="site-02-detector.png?v=20260528-3" alt="初心色譜分析器 · Soul Color Analyzer 網站 UI 截圖">
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">初心色譜分析器 · Soul Color Analyzer</h5>
@@ -6182,7 +6185,7 @@ body.nav-drawer-open{ overflow: hidden; }
 
       <a class="vibe-card" href="https://hannahchen6134.github.io/skillmarket/" target="_blank" rel="noopener">
         <div class="vibe-thumb">
-          <img src="vibe-03-skill-exchange.png?v=20260528-2" alt="初星群技能交換公會">
+          <img src="site-03-skillmarket.png?v=20260528-3" alt="初星群技能交換公會網站 UI 截圖">
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">初星群技能交換公會</h5>
@@ -6193,7 +6196,7 @@ body.nav-drawer-open{ overflow: hidden; }
 
       <a class="vibe-card" href="https://hannahchen6134.github.io/rise-roam/" target="_blank" rel="noopener">
         <div class="vibe-thumb">
-          <img src="vibe-04-rise-roam.png?v=20260528-2" alt="Rise & Roam 久坐休息提醒器">
+          <img src="site-04-rise-roam.png?v=20260528-3" alt="Rise & Roam 久坐休息提醒器網站 UI 截圖">
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">Rise & Roam 久坐休息提醒器</h5>
@@ -6204,7 +6207,7 @@ body.nav-drawer-open{ overflow: hidden; }
 
       <a class="vibe-card" href="https://hannahchen6134.github.io/Innercompass/" target="_blank" rel="noopener">
         <div class="vibe-thumb">
-          <div class="vibe-thumb-placeholder"><span>Innercompass</span></div>
+          <img src="site-05-innercompass.png?v=20260528-3" alt="Innercompass 網站 UI 截圖">
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">Innercompass</h5>
@@ -6216,7 +6219,7 @@ body.nav-drawer-open{ overflow: hidden; }
 
     <div class="vibe-scroll-hint"><span class="hint-arrow left">←</span> 左右滑動瀏覽更多 <span class="hint-arrow right">→</span></div>
 
-    <button class="portfolio-cta-primary" style="margin-top:24px;" onclick="goToService()">預約網站整理 →</button>
+    <a class="portfolio-cta-primary" style="margin-top:24px;" href="https://www.instagram.com/hannahchen0505949/" target="_blank" rel="noopener">聯繫青青 →</a>
   </div>
 </div>
 
