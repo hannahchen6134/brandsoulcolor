@@ -9,24 +9,24 @@
 
 <!-- ══════════════════════════
      SEO（品牌美感整理師定位版）
-     TODO：上線前請把所有 your-domain.com 換成正式網址
+     正式網址：http://hannahchenstudio.com/
 ══════════════════════════ -->
 <title>品牌美感整理師｜IG 版面整理、品牌配色與互動網站</title>
 <meta name="description" content="協助創作者與小品牌整理 IG 版面、品牌配色與互動式網站。透過 105 色票系統與品牌美感整理，建立更清楚、更有辨識度、更容易被記住的個人品牌視覺。">
 <meta name="keywords" content="品牌美感整理,IG 版面整理,品牌配色,品牌色彩測驗,互動網站,個人品牌">
 <meta name="author" content="青青 Hannah Chen">
 <meta name="robots" content="index,follow">
-<!-- TODO：換成正式網址 -->
-<link rel="canonical" href="https://your-domain.com/index-organizer.html">
+<!-- 正式網址 -->
+<link rel="canonical" href="http://hannahchenstudio.com/">
 
 <!-- ── Open Graph ── -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="品牌美感整理師｜IG 版面整理、品牌配色與互動網站">
 <meta property="og:description" content="協助創作者與小品牌整理 IG 版面、品牌配色與互動式網站。透過 105 色票系統與品牌美感整理，建立更清楚、更有辨識度、更容易被記住的個人品牌視覺。">
-<!-- TODO：換成正式網址 -->
-<meta property="og:url" content="https://your-domain.com/index-organizer.html">
+<!-- 正式網址 -->
+<meta property="og:url" content="http://hannahchenstudio.com/">
 <!-- TODO：換成正式 OG 圖片 -->
-<meta property="og:image" content="https://your-domain.com/brand-organizer-cover.jpg">
+<meta property="og:image" content="http://hannahchenstudio.com/225411.jpg">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -36,7 +36,7 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "品牌美感整理師｜青青",
-  "url": "https://your-domain.com/index-organizer.html",
+  "url": "http://hannahchenstudio.com/",
   "description": "協助創作者與小品牌整理 IG 版面、品牌配色與互動式網站。",
   "author": { "@type": "Person", "name": "青青 Hannah Chen" }
 }
@@ -5390,6 +5390,64 @@ body.nav-drawer-open{ overflow: hidden; }
     animation:none;
   }
 }
+/* Homepage quiz CTA refinement: 靜態暖光暈，不使用跳動動畫 */
+#pg-intro .intro-cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:auto;
+  min-width:250px;
+  max-width:min(100%, 330px);
+  min-height:46px;
+  padding:10px 32px 11px;
+  white-space:nowrap;
+  line-height:1.2;
+  border:1px solid rgba(214,149,78,.34);
+  outline:0;
+  background:
+    radial-gradient(circle at 28% 18%, rgba(255,238,196,.42), transparent 36%),
+    linear-gradient(135deg, rgba(229,164,98,.96), rgba(204,128,72,.92) 48%, rgba(232,174,104,.95));
+  color:#fff9ed;
+  font-size:.88rem;
+  font-weight:600;
+  letter-spacing:.12em;
+  text-shadow:0 1px 8px rgba(112,61,30,.18);
+  box-shadow:
+    0 12px 24px rgba(186,111,55,.14),
+    0 0 26px rgba(255,215,146,.28),
+    0 0 54px rgba(231,162,82,.12),
+    inset 0 1px 0 rgba(255,255,255,.42),
+    inset 0 -11px 24px rgba(133,75,38,.1);
+  animation:none!important;
+  transform:none;
+  transition:background .28s ease, box-shadow .28s ease, border-color .28s ease, transform .2s ease;
+}
+#pg-intro .intro-cta:hover{
+  background:
+    radial-gradient(circle at 28% 18%, rgba(255,242,204,.56), transparent 38%),
+    linear-gradient(135deg, rgba(235,174,110,.98), rgba(213,139,82,.94) 48%, rgba(238,184,114,.98));
+  border-color:rgba(219,157,89,.46);
+  box-shadow:
+    0 14px 28px rgba(183,108,55,.16),
+    0 0 34px rgba(255,219,154,.38),
+    0 0 68px rgba(232,169,92,.16),
+    inset 0 1px 0 rgba(255,255,255,.5),
+    inset 0 -11px 24px rgba(133,75,38,.08);
+  transform:translateY(-1px);
+}
+#pg-intro .intro-cta:active{transform:translateY(0) scale(.99);}
+@media(max-width:430px){
+  #pg-intro .intro-cta{
+    width:min(100%, 300px);
+    min-width:0;
+    padding-inline:24px;
+    font-size:.84rem;
+    letter-spacing:.08em;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  #pg-intro .intro-cta{animation:none!important;transition:none;}
+}
 </style>
 </head>
 <body>
@@ -5961,9 +6019,9 @@ body.nav-drawer-open{ overflow: hidden; }
     <p class="svc-sub">整理品牌配色、九宮格節奏與貼文封面，讓 IG 版面更穩、更一致。</p>
 
     <div class="vibe-grid ig-aspect">
-      <a class="vibe-card" href="我舉辦 豐盛能量交流小聚 (2).png" target="_blank" rel="noopener">
+      <a class="vibe-card" href="ig-01-gathering-event.png" target="_blank" rel="noopener">
         <div class="vibe-thumb">
-          <img src="我舉辦 豐盛能量交流小聚 (2).png" alt="豐盛能量交流小聚活動視覺">
+          <img src="ig-01-gathering-event.png" alt="豐盛能量交流小聚活動視覺">
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">豐盛能量交流小聚</h5>
@@ -5972,9 +6030,9 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
       </a>
 
-      <a class="vibe-card" href="33183_0.jpg" target="_blank" rel="noopener">
+      <a class="vibe-card" href="ig-02-values-compass.jpg" target="_blank" rel="noopener">
         <div class="vibe-thumb">
-          <img src="33183_0.jpg" alt="價值觀羅盤 IG 宣傳圖">
+          <img src="ig-02-values-compass.jpg" alt="價值觀羅盤 IG 宣傳圖">
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">價值觀羅盤</h5>
@@ -5983,9 +6041,9 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
       </a>
 
-      <a class="vibe-card" href="很多一開口都會說： (3).png" target="_blank" rel="noopener">
+      <a class="vibe-card" href="ig-03-emotion-naming.png" target="_blank" rel="noopener">
         <div class="vibe-thumb">
-          <img src="很多一開口都會說： (3).png" alt="社群經營共感貼文設計">
+          <img src="ig-03-emotion-naming.png" alt="社群經營共感貼文設計">
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">社群經營共感貼文</h5>
@@ -5994,9 +6052,9 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
       </a>
 
-      <a class="vibe-card" href="41674.jpg" target="_blank" rel="noopener">
+      <a class="vibe-card" href="ig-04-tree-hole.jpg" target="_blank" rel="noopener">
         <div class="vibe-thumb">
-          <img src="41674.jpg" alt="樹洞體質共感貼文設計">
+          <img src="ig-04-tree-hole.jpg" alt="樹洞體質共感貼文設計">
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">樹洞體質共感貼文</h5>
@@ -6005,9 +6063,9 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
       </a>
 
-      <a class="vibe-card" href="Eco-friendly, every day (3).png" target="_blank" rel="noopener">
+      <a class="vibe-card" href="ig-05-ai-accelerator.png" target="_blank" rel="noopener">
         <div class="vibe-thumb">
-          <img src="Eco-friendly, every day (3).png" alt="理想事業 AI 加速器教學型貼文">
+          <img src="ig-05-ai-accelerator.png" alt="理想事業 AI 加速器教學型貼文">
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">理想事業 AI 加速器</h5>
@@ -6016,9 +6074,9 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
       </a>
 
-      <a class="vibe-card" href="靈魂具體指引 (8).png" target="_blank" rel="noopener">
+      <a class="vibe-card" href="ig-06-soul-guidance.png" target="_blank" rel="noopener">
         <div class="vibe-thumb">
-          <img src="靈魂具體指引 (8).png" alt="靈魂具體指引服務銷售頁">
+          <img src="ig-06-soul-guidance.png" alt="靈魂具體指引服務銷售頁">
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">靈魂具體指引</h5>
@@ -6027,9 +6085,9 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
       </a>
 
-      <a class="vibe-card" href="我舉辦 豐盛能量交流小聚 (3).png" target="_blank" rel="noopener">
+      <a class="vibe-card" href="ig-07-energy-system.png" target="_blank" rel="noopener">
         <div class="vibe-thumb">
-          <img src="我舉辦 豐盛能量交流小聚 (3).png" alt="八宮能量系統 IG 圖文設計">
+          <img src="ig-07-energy-system.png" alt="八宮能量系統 IG 圖文設計">
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">八宮能量系統</h5>
@@ -6038,9 +6096,9 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
       </a>
 
-      <a class="vibe-card" href="41677.jpg" target="_blank" rel="noopener">
+      <a class="vibe-card" href="ig-08-community.jpg" target="_blank" rel="noopener">
         <div class="vibe-thumb">
-          <img src="41677.jpg" alt="為情緒取名字共感貼文設計">
+          <img src="ig-08-community.jpg" alt="為情緒取名字共感貼文設計">
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">為情緒取名字</h5>
@@ -6049,9 +6107,9 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
       </a>
 
-      <a class="vibe-card" href="Eco-friendly, every day (7).png" target="_blank" rel="noopener">
+      <a class="vibe-card" href="ig-09-gpt-post.png" target="_blank" rel="noopener">
         <div class="vibe-thumb">
-          <img src="Eco-friendly, every day (7).png" alt="GPT 貼文製作共感圖">
+          <img src="ig-09-gpt-post.png" alt="GPT 貼文製作共感圖">
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">GPT 貼文製作共感圖</h5>
@@ -6060,9 +6118,9 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
       </a>
 
-      <a class="vibe-card" href="創作者的回聲 (1).png" target="_blank" rel="noopener">
+      <a class="vibe-card" href="ig-10-creator-echo.png" target="_blank" rel="noopener">
         <div class="vibe-thumb">
-          <img src="創作者的回聲 (1).png" alt="創作者的回聲 IG 封面設計">
+          <img src="ig-10-creator-echo.png" alt="創作者的回聲 IG 封面設計">
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">創作者的回聲</h5>
@@ -6071,9 +6129,9 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
       </a>
 
-      <a class="vibe-card" href="33184.jpg" target="_blank" rel="noopener">
+      <a class="vibe-card" href="ig-11-soul-guide-offer.jpg" target="_blank" rel="noopener">
         <div class="vibe-thumb">
-          <img src="33184.jpg" alt="社群經營系列封面設計">
+          <img src="ig-11-soul-guide-offer.jpg" alt="社群經營系列封面設計">
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">社群經營系列封面</h5>
