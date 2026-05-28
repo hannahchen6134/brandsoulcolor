@@ -11,7 +11,7 @@
      SEO（品牌美感整理師定位版）
      正式網址：http://hannahchenstudio.com/
 ══════════════════════════ -->
-<title>品牌美感整理師｜IG 版面整理、品牌配色與互動網站</title>
+<title>青青 ⸡ 互動測驗網站、IG版面設計</title>
 <meta name="description" content="協助創作者與小品牌整理 IG 版面、品牌配色與互動式網站。透過 105 色票系統與品牌美感整理，建立更清楚、更有辨識度、更容易被記住的個人品牌視覺。">
 <meta name="keywords" content="品牌美感整理,IG 版面整理,品牌配色,品牌色彩測驗,互動網站,個人品牌">
 <meta name="author" content="青青 Hannah Chen">
@@ -21,12 +21,12 @@
 
 <!-- ── Open Graph ── -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="品牌美感整理師｜IG 版面整理、品牌配色與互動網站">
+<meta property="og:title" content="青青 ⸡ 互動測驗網站、IG版面設計">
 <meta property="og:description" content="協助創作者與小品牌整理 IG 版面、品牌配色與互動式網站。透過 105 色票系統與品牌美感整理，建立更清楚、更有辨識度、更容易被記住的個人品牌視覺。">
 <!-- 正式網址 -->
 <meta property="og:url" content="http://hannahchenstudio.com/">
 <!-- TODO：換成正式 OG 圖片 -->
-<meta property="og:image" content="http://hannahchenstudio.com/225411.jpg">
+<meta property="og:image" content="https://hannahchenstudio.com/">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -35,7 +35,7 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "品牌美感整理師｜青青",
+  "name": "青青 ⸡ 互動測驗網站、IG版面設計",
   "url": "http://hannahchenstudio.com/",
   "description": "協助創作者與小品牌整理 IG 版面、品牌配色與互動式網站。",
   "author": { "@type": "Person", "name": "青青 Hannah Chen" }
@@ -307,6 +307,7 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   margin-bottom:30px;
 }
 #pg-intro .intro-featured-work{
+  cursor:pointer;
   width:min(100%, 430px);
   padding:24px 26px 25px;
   background:linear-gradient(145deg,rgba(255,255,253,.96),rgba(252,248,240,.88));
@@ -5548,17 +5549,17 @@ body.nav-drawer-open{ overflow: hidden; }
       <div class="ip-sw" style="width:22px;height:30px;background:linear-gradient(158deg,#987898,#C0A8C0)"></div>
     </div>
     <div class="intro-sub">互動測驗網站及活動引導網站案例。<br>整理成客戶看得懂、也願意停留的入口。</div>
-    <div class="intro-featured-work">
+    <div class="intro-featured-work" role="button" tabindex="0" onclick="goToServiceVibe()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToServiceVibe();}">
       <div class="featured-work-kicker">Website Portfolio</div>
       <div class="featured-work-title">網站作品集</div>
       <p class="featured-work-copy">互動測驗、活動頁與工具型網站案例。<br>讓服務被理解，也讓訪客願意繼續看。</p>
-      <button class="featured-work-btn" onclick="goToServiceVibe()">看網站作品 →</button>
+      <button class="featured-work-btn" onclick="event.stopPropagation();goToServiceVibe()">看網站作品 →</button>
     </div>
-    <div class="intro-featured-work intro-featured-work-ig">
+    <div class="intro-featured-work intro-featured-work-ig" role="button" tabindex="0" onclick="goToServiceIG()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToServiceIG();}">
       <div class="featured-work-kicker">IG Layout</div>
       <div class="featured-work-title">IG 版面設計</div>
       <p class="featured-work-copy">整理圖文風格、配色與訴說的文字，<br>讓訪客輕鬆抓到你要表達的情緒與想法。</p>
-      <button class="featured-work-btn" onclick="goToServiceIG()">看 IG 作品 →</button>
+      <button class="featured-work-btn" onclick="event.stopPropagation();goToServiceIG()">看 IG 作品 →</button>
     </div>
     <div class="intro-themes" role="list" aria-label="其他入口">
       <button class="intro-theme" role="listitem" onclick="toggleAboutModal()" aria-label="About 青青">
