@@ -5666,6 +5666,117 @@ body.nav-drawer-open{ overflow: hidden; }
     animation:none!important;
   }
 }
+
+
+/* 124 refinement: 客戶視角的清楚度、卡片細緻度、正式作品集語氣 */
+#pg-intro{
+  background:
+    radial-gradient(ellipse 56% 42% at 28% 10%, rgba(232,210,172,.42) 0%, transparent 58%),
+    radial-gradient(ellipse 52% 46% at 78% 78%, rgba(218,190,142,.28) 0%, transparent 60%),
+    #FBF7F1;
+}
+#pg-intro .intro-eye{
+  color:rgba(88,60,34,.68);
+  letter-spacing:.13em;
+}
+#pg-intro .intro-title{
+  color:#3f2b1a;
+  letter-spacing:.015em;
+}
+#pg-intro .intro-sub{
+  max-width:610px;
+  color:rgba(70,48,30,.78);
+}
+#pg-intro .intro-palette{
+  filter:saturate(.92) contrast(.96);
+}
+#pg-intro .intro-featured-work{
+  width:min(100%, 468px);
+  padding:26px 32px 28px;
+  border-radius:16px;
+  border-color:rgba(130,92,46,.28);
+  background:linear-gradient(150deg,rgba(255,254,250,.96),rgba(250,246,238,.9));
+  box-shadow:0 12px 30px rgba(84,58,34,.085),0 1px 0 rgba(255,255,255,.82) inset;
+}
+#pg-intro .intro-featured-work:hover{
+  border-color:rgba(130,92,46,.38);
+  box-shadow:0 16px 34px rgba(84,58,34,.11),0 1px 0 rgba(255,255,255,.86) inset;
+}
+#pg-intro .featured-work-kicker{
+  color:rgba(128,86,42,.62);
+  letter-spacing:.16em;
+}
+#pg-intro .featured-work-copy{
+  max-width:350px;
+  color:rgba(70,48,30,.66);
+}
+#pg-intro .featured-work-btn,
+.portfolio-cta-primary,
+.book-btn{
+  border-radius:999px;
+  background:linear-gradient(135deg,#c98f4d,#e2ad68);
+  box-shadow:0 10px 22px rgba(157,101,48,.22);
+}
+#pg-intro .featured-work-btn{
+  min-height:36px;
+  padding:8px 25px;
+  color:#fffaf2;
+  border-color:rgba(177,119,55,.36);
+}
+.vibe-card{
+  border-radius:12px;
+  border-color:rgba(128,92,48,.24);
+  background:rgba(255,254,250,.92);
+  box-shadow:0 8px 22px rgba(70,48,30,.075), inset 0 1px 0 rgba(255,255,255,.72);
+}
+@media(hover:hover){
+  .vibe-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 14px 30px rgba(70,48,30,.11);
+    border-color:rgba(128,92,48,.34);
+  }
+}
+.vibe-card-body{
+  padding:16px 17px 18px;
+  gap:8px;
+}
+.vibe-card-title{
+  color:#3f2b1a;
+  letter-spacing:.025em;
+}
+.vibe-card-desc{
+  color:rgba(72,50,30,.64);
+  line-height:1.85;
+}
+.vibe-card-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin:2px 0 1px;
+}
+.vibe-card-meta span{
+  display:inline-flex;
+  align-items:center;
+  min-height:22px;
+  padding:3px 8px 4px;
+  border:1px solid rgba(154,108,53,.2);
+  border-radius:999px;
+  background:rgba(250,244,235,.78);
+  color:rgba(94,66,38,.64);
+  font-size:.64rem;
+  font-weight:400;
+  letter-spacing:.04em;
+  line-height:1;
+}
+.vibe-card-link{
+  margin-top:2px;
+  color:rgba(163,105,47,.88);
+  letter-spacing:.08em;
+}
+.portfolio-cta-primary{
+  color:#fffaf2;
+}
+
 </style>
 </head>
 <body>
@@ -5752,9 +5863,9 @@ body.nav-drawer-open{ overflow: hidden; }
 <div class="page active" id="pg-intro">
   <div class="intro-inner">
     <div class="intro-eye">給創作者｜活動主辦｜身心靈品牌</div>
-    <h1 class="intro-title intro-title-split" aria-label="為你建立溫暖吸引人的品牌入口">
-      <span>為你建立溫暖</span>
-      <span>吸引人的品牌入口</span>
+    <h1 class="intro-title intro-title-split" aria-label="讓你的服務被看懂，也被記住">
+      <span>讓你的服務被看懂</span>
+      <span>也被記住</span>
     </h1>
     <!-- 標題下方的色票動畫（保留原本的浮現節奏） -->
     <div class="intro-palette">
@@ -5765,17 +5876,17 @@ body.nav-drawer-open{ overflow: hidden; }
       <div class="ip-sw" style="width:22px;height:36px;background:linear-gradient(158deg,#0E2A5C,#2E4A6B)"></div>
       <div class="ip-sw" style="width:22px;height:30px;background:linear-gradient(158deg,#987898,#C0A8C0)"></div>
     </div>
-    <div class="intro-sub">互動測驗網站及活動引導網站案例。<br>整理成客戶看得懂、也願意停留的入口。</div>
+    <div class="intro-sub">協助創作者、活動主辦與身心靈品牌，整理 IG 版面、互動網站與活動入口。<br>讓客戶更快理解你的服務，也更願意停留、詢問與預約。</div>
     <div class="intro-featured-work" role="button" tabindex="0" onclick="goToServiceVibe()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToServiceVibe();}">
       <div class="featured-work-kicker">Website Portfolio</div>
       <div class="featured-work-title">網站作品集</div>
-      <p class="featured-work-copy">互動測驗、活動頁與工具型網站案例。<br>讓服務被理解，也讓訪客願意繼續看。</p>
+      <p class="featured-work-copy">從流程、文案到視覺節奏，<br>整理成客戶看得懂、願意繼續點開的網站入口。</p>
       <button class="featured-work-btn" onclick="event.stopPropagation();goToServiceVibe()">看網站作品 →</button>
     </div>
     <div class="intro-featured-work intro-featured-work-ig" role="button" tabindex="0" onclick="goToServiceIG()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToServiceIG();}">
       <div class="featured-work-kicker">IG Layout</div>
       <div class="featured-work-title">IG 版面設計</div>
-      <p class="featured-work-copy">整理圖文風格、配色與訴說的文字，<br>讓訪客輕鬆抓到你要表達的情緒與想法。</p>
+      <p class="featured-work-copy">整理九宮格節奏、貼文封面與色彩語氣，<br>讓內容更一致，也更容易被辨識。</p>
       <button class="featured-work-btn" onclick="event.stopPropagation();goToServiceIG()">看 IG 作品 →</button>
     </div>
     <div class="intro-final-cta" aria-label="免費品牌色彩測驗">
@@ -6230,7 +6341,7 @@ body.nav-drawer-open{ overflow: hidden; }
   <div class="svc-inner">
     <div class="snap-eyebrow">Portfolio · IG Layout</div>
     <h2 class="snap-title" style="margin-bottom:6px;font-size:1.18rem;">IG 版面整理作品</h2>
-    <p class="svc-sub">整理品牌配色、九宮格節奏與貼文封面，讓 IG 版面更穩、更一致。</p>
+    <p class="svc-sub">整理配色、封面層級與版面節奏，讓品牌在 IG 上更穩定、更容易被記住。</p>
 
     <div class="vibe-grid ig-aspect">
       <a class="vibe-card" href="ig-01-gathering-event.png?v=20260528-2" target="_blank" rel="noopener">
@@ -6239,6 +6350,7 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">豐盛能量交流小聚</h5>
+          <div class="vibe-card-meta"><span>活動報名頁</span><span>氛圍建立</span><span>預約入口</span></div>
           <p class="vibe-card-desc">暖金活動主視覺，整理成有儀式感也有資訊層級的 IG 封面。</p>
           <span class="vibe-card-link">看大圖 <span class="vibe-arrow">→</span></span>
         </div>
@@ -6250,6 +6362,7 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">價值觀羅盤</h5>
+          <div class="vibe-card-meta"><span>IG 視覺</span><span>課程資訊</span><span>封面層級</span></div>
           <p class="vibe-card-desc">明亮天空系宣傳圖，讓大標題、日期與課程資訊一眼被看見。</p>
           <span class="vibe-card-link">看大圖 <span class="vibe-arrow">→</span></span>
         </div>
@@ -6261,6 +6374,7 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">社群經營共感貼文</h5>
+          <div class="vibe-card-meta"><span>貼文設計</span><span>生活感排版</span><span>閱讀節奏</span></div>
           <p class="vibe-card-desc">人物照片與對話框排版，建立更貼近讀者的內容節奏。</p>
           <span class="vibe-card-link">看大圖 <span class="vibe-arrow">→</span></span>
         </div>
@@ -6272,6 +6386,7 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">樹洞體質共感貼文</h5>
+          <div class="vibe-card-meta"><span>柔和視覺</span><span>情緒主題</span><span>留白設計</span></div>
           <p class="vibe-card-desc">淡彩留白與大字編排，讓情緒主題保有柔和但清楚的入口。</p>
           <span class="vibe-card-link">看大圖 <span class="vibe-arrow">→</span></span>
         </div>
@@ -6283,6 +6398,7 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">理想事業 AI 加速器</h5>
+          <div class="vibe-card-meta"><span>教學型貼文</span><span>資訊整理</span><span>段落層級</span></div>
           <p class="vibe-card-desc">資訊量高的教學頁，用留白、色塊與段落層級整理閱讀順序。</p>
           <span class="vibe-card-link">看大圖 <span class="vibe-arrow">→</span></span>
         </div>
@@ -6294,6 +6410,7 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">靈魂具體指引</h5>
+          <div class="vibe-card-meta"><span>銷售頁視覺</span><span>價格資訊</span><span>行動提示</span></div>
           <p class="vibe-card-desc">服務銷售頁視覺，整合主標、成果承諾、價格與行動提示。</p>
           <span class="vibe-card-link">看大圖 <span class="vibe-arrow">→</span></span>
         </div>
@@ -6305,6 +6422,7 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">八宮能量系統</h5>
+          <div class="vibe-card-meta"><span>系統圖像化</span><span>抽象內容</span><span>觀看動線</span></div>
           <p class="vibe-card-desc">能量系統圖像化，把抽象內容整理成可以停留觀看的版面。</p>
           <span class="vibe-card-link">看大圖 <span class="vibe-arrow">→</span></span>
         </div>
@@ -6316,6 +6434,7 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">為情緒取名字</h5>
+          <div class="vibe-card-meta"><span>夢感主題</span><span>金句版面</span><span>柔霧背景</span></div>
           <p class="vibe-card-desc">藍紫夢感主題，讓大字金句與柔霧背景維持乾淨的閱讀感。</p>
           <span class="vibe-card-link">看大圖 <span class="vibe-arrow">→</span></span>
         </div>
@@ -6327,6 +6446,7 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">GPT 貼文製作共感圖</h5>
+          <div class="vibe-card-meta"><span>生活感拼貼</span><span>手寫語氣</span><span>親切專業</span></div>
           <p class="vibe-card-desc">粉色生活感版面，用拼貼照片與手寫字平衡親切與專業。</p>
           <span class="vibe-card-link">看大圖 <span class="vibe-arrow">→</span></span>
         </div>
@@ -6338,6 +6458,7 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">創作者的回聲</h5>
+          <div class="vibe-card-meta"><span>系列封面</span><span>聲波主題</span><span>記憶點</span></div>
           <p class="vibe-card-desc">藍色聲波主題封面，讓系列名稱有清楚記憶點。</p>
           <span class="vibe-card-link">看大圖 <span class="vibe-arrow">→</span></span>
         </div>
@@ -6349,6 +6470,7 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">社群經營系列封面</h5>
+          <div class="vibe-card-meta"><span>封面系統</span><span>照片分割</span><span>系列辨識</span></div>
           <p class="vibe-card-desc">照片分割與文字主題封面，保留生活感，也整理出系列辨識度。</p>
           <span class="vibe-card-link">看大圖 <span class="vibe-arrow">→</span></span>
         </div>
@@ -6368,7 +6490,7 @@ body.nav-drawer-open{ overflow: hidden; }
   <div class="svc-inner">
     <div class="snap-eyebrow">Portfolio · Vibecoding</div>
     <h2 class="snap-title" style="margin-bottom:6px;font-size:1.18rem;">互動網站作品</h2>
-    <p class="svc-sub">整理網站架構、互動流程與品牌美感，做出能被體驗、被分享的網站。</p>
+    <p class="svc-sub">每個作品都從「客戶是否看得懂」出發，整理流程、視覺層級與行動入口。</p>
 
     <div class="vibe-grid">
       <a class="vibe-card" href="https://hannahchen6134.github.io/soulcolor/" target="_blank" rel="noopener">
@@ -6377,6 +6499,7 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">初心色譜 · Soul Color</h5>
+          <div class="vibe-card-meta"><span>品牌色彩測驗</span><span>互動流程</span><span>結果頁視覺</span></div>
           <p class="vibe-card-desc">直覺選色，看到你此刻的情緒狀態色彩</p>
           <span class="vibe-card-link">看作品 <span class="vibe-arrow">→</span></span>
         </div>
@@ -6388,6 +6511,7 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">初心色譜分析器 · Soul Color Analyzer</h5>
+          <div class="vibe-card-meta"><span>工具型網站</span><span>上傳體驗</span><span>IG 視覺產出</span></div>
           <p class="vibe-card-desc">檢測你的圖片主要由哪些初心色譜構成，並生成 IG 版面背景。</p>
           <span class="vibe-card-link">看作品 <span class="vibe-arrow">→</span></span>
         </div>
@@ -6399,6 +6523,7 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">初星群技能交換公會</h5>
+          <div class="vibe-card-meta"><span>平台架構</span><span>角色設定</span><span>交換流程</span></div>
           <p class="vibe-card-desc">讓初星群社員自由交換技能的公佈欄網站。</p>
           <span class="vibe-card-link">看作品 <span class="vibe-arrow">→</span></span>
         </div>
@@ -6410,6 +6535,7 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">Rise & Roam 久坐休息提醒器</h5>
+          <div class="vibe-card-meta"><span>工具型網站</span><span>習慣提醒</span><span>介面節奏</span></div>
           <p class="vibe-card-desc">每 25 分鐘溫柔提醒起身走動，兼具工具功能與細緻品牌氛圍。</p>
           <span class="vibe-card-link">看作品 <span class="vibe-arrow">→</span></span>
         </div>
@@ -6421,6 +6547,7 @@ body.nav-drawer-open{ overflow: hidden; }
         </div>
         <div class="vibe-card-body">
           <h5 class="vibe-card-title">Innercompass</h5>
+          <div class="vibe-card-meta"><span>測驗體驗</span><span>自我覺察</span><span>結果引導</span></div>
           <p class="vibe-card-desc">內在羅盤式的互動引導網站，幫使用者透過提問看見當下方向。</p>
           <span class="vibe-card-link">看作品 <span class="vibe-arrow">→</span></span>
         </div>
