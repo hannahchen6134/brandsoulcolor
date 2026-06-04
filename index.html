@@ -5777,6 +5777,42 @@ body.nav-drawer-open{ overflow: hidden; }
   color:#fffaf2;
 }
 
+
+
+/* seamless background pass: 自然柔霧漸層，避免背景或橫向卡片邊界產生直線感 */
+#pg-intro,
+#pg-service,
+#pg-ig-works,
+#pg-vibe-works,
+#pg-snap,
+#pg-reveal,
+#pg-intro-transition{
+  background:
+    radial-gradient(ellipse 110% 78% at 18% -14%, rgba(232,211,178,.36) 0%, rgba(232,211,178,.16) 34%, rgba(232,211,178,0) 72%),
+    radial-gradient(ellipse 92% 70% at 108% 18%, rgba(255,253,248,.84) 0%, rgba(255,253,248,.38) 42%, rgba(255,253,248,0) 76%),
+    radial-gradient(ellipse 96% 72% at 54% 114%, rgba(218,191,153,.24) 0%, rgba(218,191,153,.1) 38%, rgba(218,191,153,0) 74%),
+    linear-gradient(135deg, #fffdfa 0%, #fbf7f1 38%, #f7efe4 72%, #fbf8f2 100%) !important;
+  background-color:#fbf7f1 !important;
+  background-repeat:no-repeat;
+}
+.grain{
+  opacity:.28;
+}
+#pg-intro .intro-featured-work,
+.vibe-card{
+  border-color:rgba(132,96,52,.14);
+  box-shadow:0 14px 36px rgba(76,52,31,.07), inset 0 1px 0 rgba(255,255,255,.76);
+}
+.vibe-thumb{
+  border-bottom-color:rgba(156,112,60,.08);
+}
+.vibe-grid{
+  padding-left:2px;
+  padding-right:42px;
+  -webkit-mask-image:linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) calc(100% - 72px), rgba(0,0,0,0) 100%);
+  mask-image:linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) calc(100% - 72px), rgba(0,0,0,0) 100%);
+}
+
 </style>
 </head>
 <body>
