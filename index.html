@@ -1381,7 +1381,7 @@ body:has(#pg-intro.active) .nav-menu-btn{
 }
 @media(max-width:480px){
   .color-grid{grid-template-columns:repeat(6,1fr);gap:5px;padding:8px 24px 90px;}
-  .intro-quote,.snap-cta-text,.svc-sub,.proof-text,
+  .intro-quote,.snap-cta-text,.svc-sub,
   .svc-check-list li,.svc-for-who-list li,.price-includes,
   .price-includes-list li,.bio-tagline,.book-note{font-weight:400;}
 }
@@ -1842,30 +1842,6 @@ body:has(#pg-intro.active) .nav-menu-btn{
 .price-includes-list li::before{
   content:'✓';color:rgba(184,144,74,.8);font-size:.7rem;flex-shrink:0;
 }
-/* ── SOCIAL PROOF ── */
-.social-proof{
-  width:100%;margin-bottom:20px;
-}
-.social-proof-title{
-  font-family:'EB Garamond',serif;font-size:.66rem;letter-spacing:.36em;
-  color:#5C3D1E;text-transform:uppercase;
-  text-align:center;margin-bottom:14px;
-}
-.proof-card{
-  background:rgba(184,144,74,.03);
-  border:1px solid rgba(184,144,74,.1);
-  border-radius:12px;
-  padding:12px 14px;margin-bottom:8px;
-}
-.proof-text{
-  font-size:.72rem;font-weight:300;font-style:italic;
-  letter-spacing:.04em;line-height:1.8;
-  color:rgba(42,28,14,.55);margin-bottom:6px;
-}
-.proof-author{
-  font-size:.68rem;letter-spacing:.1em;
-  color:rgba(106,80,40,.48);text-align:right;
-}
 .book-note{
   font-size:.72rem;letter-spacing:.06em;
   color:rgba(106,80,40,.45);text-align:center;
@@ -1948,9 +1924,6 @@ body:has(#pg-intro.active) .nav-menu-btn{
   .svc-addon{font-size:.72rem;}
   .price-card{padding:28px 36px 24px;max-width:560px;margin-left:auto;margin-right:auto;margin-bottom:24px;}
   .price-value{font-size:1.85rem;}
-  .social-proof{max-width:640px;margin-left:auto;margin-right:auto;margin-bottom:20px;}
-  .proof-card{padding:16px 20px;}
-  .proof-text{font-size:.88rem;}
   .book-note{font-size:.82rem;max-width:600px;margin-left:auto;margin-right:auto;}
   .book-btn{font-size:.85rem;padding:15px 56px;}
 
@@ -6339,7 +6312,10 @@ body,
 #pg-service,
 #pg-ig-works,
 #pg-vibe-works{
-  background-color:transparent !important;
+  background:
+    radial-gradient(circle at 14% 12%, rgba(246,214,171,.20), transparent 26%),
+    radial-gradient(circle at 84% 14%, rgba(245,221,188,.18), transparent 24%),
+    linear-gradient(180deg, #f8f1e7 0%, #f5ede2 52%, #f2e8dc 100%) !important;
 }
 #pg-intro::before,
 #pg-intro::after{
@@ -6352,7 +6328,7 @@ body,
 #pg-intro .intro-final-cta,
 .vibe-card{
   background:
-    linear-gradient(180deg, rgba(255,251,245,.96) 0%, rgba(250,242,232,.94) 100%) !important;
+    linear-gradient(180deg, rgba(255,248,240,.97) 0%, rgba(248,238,226,.95) 100%) !important;
   border-color:var(--warm-apricot-border) !important;
   box-shadow:
     0 18px 44px rgba(102,74,42,.08),
@@ -6378,7 +6354,7 @@ body:has(#pg-intro.active) .nav{
 .nav-drawer{
   background:
     radial-gradient(circle at 18% 10%, rgba(248,223,190,.38), transparent 24%),
-    linear-gradient(180deg, rgba(255,251,246,.99) 0%, rgba(248,240,231,.99) 100%) !important;
+    linear-gradient(180deg, rgba(252,245,236,.99) 0%, rgba(246,236,223,.99) 100%) !important;
   border-left:1px solid var(--warm-apricot-border) !important;
 }
 .nav-drawer-title,
@@ -6387,6 +6363,58 @@ body:has(#pg-intro.active) .nav{
 #pg-intro .featured-work-title,
 #pg-intro .intro-title{
   color:var(--warm-apricot-text) !important;
+}
+#pg-intro .intro-featured-work,
+#pg-intro .intro-final-cta{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  border-color:rgba(188,145,92,.30) !important;
+  box-shadow:
+    0 22px 52px rgba(110,79,45,.10),
+    0 0 0 1px rgba(255,248,239,.46) inset,
+    0 14px 30px rgba(245,214,176,.16),
+    0 1px 0 rgba(255,255,255,.88) inset !important;
+}
+#pg-intro .intro-featured-work::before,
+#pg-intro .intro-final-cta::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(114deg, transparent 0%, rgba(255,255,255,.08) 36%, rgba(244,214,176,.16) 50%, rgba(255,255,255,.07) 63%, transparent 82%),
+    radial-gradient(circle at 18% 12%, rgba(255,255,255,.30), transparent 30%),
+    radial-gradient(circle at 78% 20%, rgba(244,215,173,.10), transparent 34%);
+  opacity:.72;
+  z-index:0;
+}
+#pg-intro .intro-featured-work::before{
+  animation:workSweep 4.2s var(--sweep-delay,2.25s) cubic-bezier(.23,.61,.35,1) both !important;
+}
+#pg-intro .intro-featured-work-ig::before{
+  animation:workSweep 4.6s var(--sweep-delay,2.55s) cubic-bezier(.23,.61,.35,1) both !important;
+}
+#pg-intro .intro-featured-work::after,
+#pg-intro .intro-final-cta::after{
+  box-shadow:0 0 12px rgba(236,199,147,.08);
+}
+#pg-intro .intro-featured-work > *,
+#pg-intro .intro-final-cta > *{
+  position:relative;
+  z-index:1;
+}
+@media(hover:hover){
+  #pg-intro .intro-featured-work:hover,
+  #pg-intro .intro-final-cta:hover{
+    border-color:rgba(192,148,92,.40) !important;
+    box-shadow:
+      0 26px 58px rgba(110,79,45,.13),
+      0 0 0 1px rgba(255,248,239,.52) inset,
+      0 16px 38px rgba(245,214,176,.20),
+      0 1px 0 rgba(255,255,255,.92) inset !important;
+    transform:translateY(-2px);
+  }
 }
 .nav-drawer-label,
 .nav-drawer-eyebrow,
@@ -6421,10 +6449,113 @@ body:has(#pg-intro.active) .nav{
     0 0 26px rgba(247,214,170,.22),
     inset 0 1px 0 rgba(255,248,237,.58) !important;
 }
+#pg-intro .intro-cta{
+  letter-spacing:.12em !important;
+  font-weight:500 !important;
+}
 .vibe-thumb,
 .about-modal-photo{
   background:linear-gradient(180deg, rgba(250,241,228,.82), rgba(245,233,215,.72)) !important;
   border-color:rgba(188,146,93,.14) !important;
+}
+@media (max-width: 900px){
+  .grain,
+  #pg-intro::before,
+  #pg-intro::after,
+  .intro-featured-work::before{
+    display:none !important;
+  }
+  *,
+  *::before,
+  *::after{
+    scroll-behavior:auto !important;
+  }
+  .nav,
+  .nav-overlay,
+  .nav-drawer,
+  .about-modal,
+  #pg-intro .intro-featured-work,
+  #pg-intro .intro-final-cta,
+  .vibe-card,
+  .book-btn,
+  .intro-cta,
+  .share-ig-btn,
+  .share-threads-btn{
+    -webkit-backdrop-filter:none !important;
+    backdrop-filter:none !important;
+    box-shadow:0 8px 20px rgba(96,68,38,.08), 0 1px 0 rgba(255,255,255,.72) inset !important;
+  }
+  .vibe-grid{
+    -webkit-mask-image:none !important;
+    mask-image:none !important;
+  }
+  .vibe-card,
+  .nav-menu-btn,
+  .book-btn,
+  .intro-cta{
+    animation:none !important;
+    transition:background .2s ease, color .2s ease, border-color .2s ease, transform .12s ease !important;
+  }
+  .intro-title,
+  .intro-sub,
+  .intro-featured-work,
+  .intro-final-cta,
+  .intro-flow-hint,
+  .intro-cta,
+  .intro-about-link{
+    animation:none !important;
+    filter:none !important;
+    opacity:1 !important;
+    transform:none !important;
+  }
+  .intro-eye{
+    animation:up .72s .08s both !important;
+    opacity:0 !important;
+    transform:translateY(8px) !important;
+  }
+  #pg-intro .intro-title{
+    animation:titleCeremony 1.08s .18s cubic-bezier(.19,1,.22,1) both !important;
+    opacity:0 !important;
+    transform:translateY(10px) !important;
+  }
+  #pg-intro .intro-title-split span:nth-child(1){
+    animation:titleCeremony 1.05s .24s cubic-bezier(.19,1,.22,1) both !important;
+  }
+  #pg-intro .intro-title-split span:nth-child(2){
+    animation:titleCeremony 1.05s .42s cubic-bezier(.19,1,.22,1) both !important;
+  }
+  #pg-intro .intro-title::after{
+    animation:lineCeremony 1.08s .78s cubic-bezier(.19,1,.22,1) both !important;
+    opacity:0 !important;
+    transform:scaleX(.72) !important;
+  }
+  #pg-intro .intro-palette{
+    animation:up .8s .68s both !important;
+    opacity:0 !important;
+    transform:translateY(10px) !important;
+  }
+  .intro-palette .ip-sw{
+    animation:swFloat 4.6s ease-in-out infinite !important;
+  }
+  .intro-palette .ip-sw:nth-child(1){animation-delay:0s !important;}
+  .intro-palette .ip-sw:nth-child(2){animation-delay:.32s !important;}
+  .intro-palette .ip-sw:nth-child(3){animation-delay:.64s !important;}
+  .intro-palette .ip-sw:nth-child(4){animation-delay:.96s !important;}
+  .intro-palette .ip-sw:nth-child(5){animation-delay:1.28s !important;}
+  .intro-palette .ip-sw:nth-child(6){animation-delay:1.6s !important;}
+  #pg-intro .intro-theme{
+    opacity:0 !important;
+    transform:translateY(12px) scale(.96) !important;
+  }
+  #pg-intro .intro-theme:nth-of-type(1){
+    animation:chipReveal .82s .94s cubic-bezier(.34,1.32,.64,1) both, chipGlow 5.8s 2.1s ease-in-out infinite !important;
+  }
+  #pg-intro .intro-theme:nth-of-type(2){
+    animation:chipReveal .82s 1.08s cubic-bezier(.34,1.32,.64,1) both, chipGlow 5.8s 2.3s ease-in-out infinite !important;
+  }
+  #pg-intro .intro-theme:nth-of-type(3){
+    animation:chipReveal .82s 1.22s cubic-bezier(.34,1.32,.64,1) both, chipGlow 5.8s 2.5s ease-in-out infinite !important;
+  }
 }
 </style>
 </head>
@@ -6465,7 +6596,7 @@ body:has(#pg-intro.active) .nav{
 <aside class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="主選單" aria-hidden="true">
   <button class="nav-drawer-close" onclick="toggleNavMenu()" aria-label="關閉選單">&times;</button>
   <div class="nav-drawer-eyebrow">Menu</div>
-  <div class="nav-drawer-title">青青｜身心靈品牌美感設計師</div>
+  <div class="nav-drawer-title">青青｜身心靈品牌美感整理</div>
 
   <div class="nav-drawer-section">
     <div class="nav-drawer-label">從這裡開始</div>
@@ -6496,7 +6627,7 @@ body:has(#pg-intro.active) .nav{
       <span class="nav-drawer-arrow">→</span>
     </button>
     <button class="nav-drawer-link" onclick="closeDrawerThen(goToService)">
-      <span class="nav-drawer-name">預約品牌美感整理諮詢</span>
+      <span class="nav-drawer-name">預約品牌美感整理諮詢 建置中</span>
       <span class="nav-drawer-arrow">→</span>
     </button>
   </div>
@@ -6512,8 +6643,8 @@ body:has(#pg-intro.active) .nav{
 <div class="page active" id="pg-intro">
   <div class="intro-inner">
     <div class="intro-eye">給創作者｜活動主辦｜身心靈品牌</div>
-    <h1 class="intro-title intro-title-split" aria-label="讓你的服務被看懂，也被記住">
-      <span>讓你的服務被看懂</span>
+    <h1 class="intro-title intro-title-split" aria-label="讓你的品牌更有溫度，也被記住">
+      <span>讓你的品牌更有溫度</span>
       <span>也被記住</span>
     </h1>
     <!-- 標題下方的色票動畫（保留原本的浮現節奏） -->
@@ -6528,13 +6659,13 @@ body:has(#pg-intro.active) .nav{
     <div class="intro-sub">整理 IG 版面、互動網站與活動入口。<br>讓客戶更快看懂你的服務，也更願意詢問與預約。</div>
     <div class="intro-featured-work" role="button" tabindex="0" onclick="goToServiceVibe()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToServiceVibe();}">
       <div class="featured-work-kicker">Website Portfolio</div>
-      <div class="featured-work-title">網站作品集</div>
+      <div class="featured-work-title">Vibe Coding網站作品</div>
       <p class="featured-work-copy">從流程、文案到視覺節奏，<br>整理成客戶看得懂、願意繼續點開的網站入口。</p>
       <button class="featured-work-btn" onclick="event.stopPropagation();goToServiceVibe()">看網站作品 →</button>
     </div>
     <div class="intro-featured-work intro-featured-work-ig" role="button" tabindex="0" onclick="goToServiceIG()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToServiceIG();}">
       <div class="featured-work-kicker">IG Layout</div>
-      <div class="featured-work-title">IG 版面設計</div>
+      <div class="featured-work-title">iG版面設計作品</div>
       <p class="featured-work-copy">整理九宮格節奏、貼文封面與色彩語氣，<br>讓內容更一致，也更容易被辨識。</p>
       <button class="featured-work-btn" onclick="event.stopPropagation();goToServiceIG()">看 IG 作品 →</button>
     </div>
@@ -7267,22 +7398,6 @@ body:has(#pg-intro.active) .nav{
         <li>大型客製化網站工程開發</li>
       </ul>
       <p class="svc-not-offer-note">我目前更擅長的是協助創作者與小品牌，把現有的品牌美感、IG 版面與網站內容整理得更清楚、更一致、更能被記住。</p>
-    </div>
-
-    <div class="social-proof">
-      <div class="social-proof-title">What They Say</div>
-      <div class="proof-card">
-        <div class="proof-text">「原本一直覺得自己的版面哪裡怪怪的，諮詢完才發現是配色和留白的問題。青青直接幫我現場改，前後對比差超多！」</div>
-        <div class="proof-author">— 手作飾品品牌主理人</div>
-      </div>
-      <div class="proof-card">
-        <div class="proof-text">「最驚喜的是色票測驗，讓我重新認識自己的品牌定位。報告整理得很清楚，現在做圖終於有方向了。」</div>
-        <div class="proof-author">— 身心靈工作者</div>
-      </div>
-      <div class="proof-card">
-        <div class="proof-text">「一小時真的很值得，不只是聊天，是實際帶走可以用的東西。推薦給所有還在摸索品牌風格的人。」</div>
-        <div class="proof-author">— IG 經營新手</div>
-      </div>
     </div>
 
     <div class="price-card" id="booking">
@@ -9481,7 +9596,7 @@ function closeDrawerThen(fn){
       <li>
         <span class="ahl-icon">✦</span>
         <div>
-          <strong>身心靈與創作者品牌長期合作</strong>
+          <strong>合作3年+</strong>
           <span>懂創作者，懂如何把氣質視覺化</span>
         </div>
       </li>
@@ -9506,6 +9621,9 @@ function closeDrawerThen(fn){
 <script>
 (function(){
   function initAutoPortfolioScroll(){
+    if(window.matchMedia('(max-width: 900px)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      return;
+    }
     const grids = document.querySelectorAll('#pg-ig-works .vibe-grid, #pg-vibe-works .vibe-grid');
 
     grids.forEach(function(grid){
