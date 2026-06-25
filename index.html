@@ -965,6 +965,52 @@ h1,h2,h3,p,.intro-title,.intro-sub,.intro-quote,.intro-flow-hint,
   .intro-about-link:hover::after{transform:scaleX(1);background:rgba(184,144,74,.6);}
 }
 .intro-about-link:active{transform:scale(.97);}
+.intro-bottom-about-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin:24px auto 8px;
+  min-height:36px;
+  padding:6px 14px 8px;
+  border:none;
+  background:transparent;
+  font-family:'EB Garamond',serif;
+  font-size:.86rem;
+  font-weight:400;
+  letter-spacing:.16em;
+  color:rgba(112,76,36,.94);
+  cursor:pointer;
+  position:relative;
+  transition:color .24s ease, transform .24s ease;
+}
+.intro-bottom-about-link .ab-zh{
+  font-family:'Noto Serif TC',serif;
+  margin-left:.46em;
+  letter-spacing:.12em;
+}
+.intro-bottom-about-link::after{
+  content:'';
+  position:absolute;
+  left:16px;
+  right:16px;
+  bottom:4px;
+  height:1px;
+  background:rgba(168,118,58,.42);
+  transform:scaleX(.72);
+  transform-origin:center;
+  transition:transform .28s ease, background .28s ease;
+}
+@media(hover:hover){
+  .intro-bottom-about-link:hover{
+    color:rgba(136,92,42,.98);
+    transform:translateY(-1px);
+  }
+  .intro-bottom-about-link:hover::after{
+    transform:scaleX(1);
+    background:rgba(176,123,60,.62);
+  }
+}
+.intro-bottom-about-link:active{transform:scale(.98);}
 /* 首頁 nav 條變透明——漢堡按鈕＋About 青青 一組漂浮右上角
    標題、動畫、cascade 全部從頁面頂端開始，nav 不造成視覺斷層 */
 body:has(#pg-intro.active) .nav{
@@ -6432,6 +6478,11 @@ body:has(#pg-intro.active) .nav{
   color:var(--warm-apricot-muted) !important;
   border-color:rgba(189,148,95,.18) !important;
 }
+#pg-intro .intro-featured-work .featured-work-title{
+  margin-bottom:20px !important;
+  letter-spacing:.09em !important;
+  line-height:1.42 !important;
+}
 .nav-drawer-cta,
 .nav-drawer-cta span,
 .nav-drawer-cta .nav-drawer-arrow{
@@ -6510,13 +6561,20 @@ body:has(#pg-intro.active) .nav{
   }
   .intro-eye{
     animation:up .72s .08s both !important;
-    opacity:0 !important;
-    transform:translateY(8px) !important;
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
   }
   #pg-intro .intro-title{
     animation:titleCeremony 1.08s .18s cubic-bezier(.19,1,.22,1) both !important;
-    opacity:0 !important;
-    transform:translateY(10px) !important;
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
+  }
+  #pg-intro .intro-title-split span{
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
   }
   #pg-intro .intro-title-split span:nth-child(1){
     animation:titleCeremony 1.05s .24s cubic-bezier(.19,1,.22,1) both !important;
@@ -6526,13 +6584,14 @@ body:has(#pg-intro.active) .nav{
   }
   #pg-intro .intro-title::after{
     animation:lineCeremony 1.08s .78s cubic-bezier(.19,1,.22,1) both !important;
-    opacity:0 !important;
-    transform:scaleX(.72) !important;
+    opacity:1 !important;
+    transform:scaleX(1) !important;
   }
   #pg-intro .intro-palette{
     animation:up .8s .68s both !important;
-    opacity:0 !important;
-    transform:translateY(10px) !important;
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
   }
   .intro-palette .ip-sw{
     animation:swFloat 4.6s ease-in-out infinite !important;
@@ -6544,8 +6603,9 @@ body:has(#pg-intro.active) .nav{
   .intro-palette .ip-sw:nth-child(5){animation-delay:1.28s !important;}
   .intro-palette .ip-sw:nth-child(6){animation-delay:1.6s !important;}
   #pg-intro .intro-theme{
-    opacity:0 !important;
-    transform:translateY(12px) scale(.96) !important;
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
   }
   #pg-intro .intro-theme:nth-of-type(1){
     animation:chipReveal .82s .94s cubic-bezier(.34,1.32,.64,1) both, chipGlow 5.8s 2.1s ease-in-out infinite !important;
@@ -6556,6 +6616,19 @@ body:has(#pg-intro.active) .nav{
   #pg-intro .intro-theme:nth-of-type(3){
     animation:chipReveal .82s 1.22s cubic-bezier(.34,1.32,.64,1) both, chipGlow 5.8s 2.5s ease-in-out infinite !important;
   }
+}
+#pg-intro-transition,
+#pg-snap,
+#pg-revealing,
+.round-page,
+#pg-service,
+#pg-ig-works,
+#pg-vibe-works{
+  background:
+    radial-gradient(ellipse 60% 46% at 22% 14%, rgba(232,210,172,.62) 0%, transparent 56%),
+    radial-gradient(ellipse 54% 46% at 82% 84%, rgba(232,210,172,.5) 0%, transparent 54%),
+    radial-gradient(ellipse 46% 40% at 86% 22%, rgba(232,210,172,.3) 0%, transparent 52%),
+    #FBF7F1 !important;
 }
 </style>
 </head>
@@ -6601,7 +6674,7 @@ body:has(#pg-intro.active) .nav{
   <div class="nav-drawer-section">
     <div class="nav-drawer-label">從這裡開始</div>
     <button class="nav-drawer-link nav-drawer-cta" onclick="closeDrawerThen(startFlow)">
-      <span>測我的品牌色彩人格</span>
+      <span>測我的品牌氣質人格</span>
       <span class="nav-drawer-arrow">→</span>
     </button>
   </div>
@@ -6660,20 +6733,19 @@ body:has(#pg-intro.active) .nav{
     <div class="intro-featured-work" role="button" tabindex="0" onclick="goToServiceVibe()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToServiceVibe();}">
       <div class="featured-work-kicker">Website Portfolio</div>
       <div class="featured-work-title">Vibe Coding網站作品</div>
-      <p class="featured-work-copy">從流程、文案到視覺節奏，<br>整理成客戶看得懂、願意繼續點開的網站入口。</p>
-      <button class="featured-work-btn" onclick="event.stopPropagation();goToServiceVibe()">看網站作品 →</button>
+      <button class="featured-work-btn" onclick="event.stopPropagation();goToServiceVibe()">看作品 →</button>
     </div>
     <div class="intro-featured-work intro-featured-work-ig" role="button" tabindex="0" onclick="goToServiceIG()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToServiceIG();}">
       <div class="featured-work-kicker">IG Layout</div>
-      <div class="featured-work-title">iG版面設計作品</div>
-      <p class="featured-work-copy">整理九宮格節奏、貼文封面與色彩語氣，<br>讓內容更一致，也更容易被辨識。</p>
-      <button class="featured-work-btn" onclick="event.stopPropagation();goToServiceIG()">看 IG 作品 →</button>
+      <div class="featured-work-title">IG版面設計作品</div>
+      <button class="featured-work-btn" onclick="event.stopPropagation();goToServiceIG()">看作品 →</button>
     </div>
     <div class="intro-final-cta" aria-label="免費品牌色彩測驗">
       <div class="intro-flow-hint"><span class="intro-flow-title">還不確定自己的品牌方向？</span><br><span>先用免費色彩測驗，<span class="nowrap">2&nbsp;分鐘</span>整理出你的品牌氣質與配色線索。</span></div>
-      <button class="intro-cta" onclick="startFlow()">免費測我的品牌色彩 →</button>
+      <button class="intro-cta" onclick="startFlow()">免費測我的品牌氣質 →</button>
       <button class="intro-about-link" onclick="toggleAboutModal()">先認識青青 →</button>
     </div>
+    <button class="intro-bottom-about-link" onclick="toggleAboutModal()">About<span class="ab-zh">青青</span></button>
   </div>
 </div>
 
@@ -9596,7 +9668,7 @@ function closeDrawerThen(fn){
       <li>
         <span class="ahl-icon">✦</span>
         <div>
-          <strong>合作3年+</strong>
+          <strong>與身心靈品牌合作4年+</strong>
           <span>懂創作者，懂如何把氣質視覺化</span>
         </div>
       </li>
